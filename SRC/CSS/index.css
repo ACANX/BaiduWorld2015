@@ -1,1 +1,402 @@
 
+@charset "UTF-8";
+.f-lc-news-list ul li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.f-lc-banner img, .m-lc-logo img, .f-lc-countdown .u-lc-countdown-tit img, .f-lc-countdown .f-lc-countdown-time li img, .f-lc-countdown .f-lc-countdown-star li img, .m-lc-yore .m-lc-yore-tit img, .f-lc-video-con li img, .g-lc-video-left .u-lc-img img, .g-lc-video-right .u-lc-img img, .m-lc-radius li img, .u-lc-guests-img img { width: 100%; height: auto; }
+
+html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+
+body { font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "黑体", Arial, sans-serif; overflow-x: hidden; }
+
+body, h1, h2, h3, h4, h5, h6, div, p, ul { padding: 0px; margin: 0px; }
+
+ul, dl, ol { list-style-type: none; }
+
+a { text-decoration: none; }
+
+.g-lc-page { width: 100%; height: auto; position: relative; margin: 0px auto; overflow: hidden; background-color: #000000; }
+
+.g-lc-header { width: 100%; max-width: 1440px; height: 665px; position: relative; margin: 0 auto; z-index: 3; overflow: hidden; }
+
+.g-lc-content { width: 900px; position: relative; margin: 0px auto; z-index: 3; }
+.g-lc-content.u-lc-height-a { height: 625px; }
+.g-lc-content.u-lc-height-b { height: 360px; }
+.g-lc-content.u-lc-height-c { height: 210px; }
+.g-lc-content.u-lc-height-d { height: 310px; margin-top: 20px; }
+.g-lc-content.u-lc-height-e { height: 390px; }
+.g-lc-content.u-lc-height-f { height: 200px; }
+
+.g-lc-footer { width: 100%; height: 230px; position: relative; margin: 0 auto; z-index: 3; font-size: 14px; color: #ffffff; line-height: 30px; text-align: center; }
+.g-lc-footer a { color: #ffffff; }
+
+.g-lc-bg { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 1; }
+.g-lc-bg li { width: 100%; position: absolute; left: 0px; }
+.g-lc-bg li.u-lc-bg-a { height: 1280px; bottom: 1200px; background: url("http://baiduworld.baidu.com/2015/images2015/body-bg01.jpg") no-repeat center bottom; }
+.g-lc-bg li.u-lc-bg-b { height: 1200px; bottom: 0px; background: url("http://baiduworld.baidu.com/2015/images2015/body-bg02.jpg") no-repeat center bottom; }
+
+.g-lc-star-line { width: 1125px; height: 2143px; position: absolute; left: 50%; top: 456px; margin: 0 0 0 -582px; z-index: 2; background: url("http://baiduworld.baidu.com/2015/images2015/star-line-bg.png") no-repeat left top; }
+
+.f-lc-star { position: absolute; left: 0px; z-index: 1; }
+
+.s-lc-star-a { bottom: 0px; }
+
+.s-lc-star-b { bottom: 1200px; }
+
+.u-lc-plate-tit { width: 100%; height: 16px; float: left; }
+.u-lc-plate-tit img { width: auto; height: 100%; float: left; display: block; }
+.u-lc-plate-tit a { display: block; float: left; margin: 5px 0 0 15px; }
+.u-lc-plate-tit span { display: block; float: left; margin: 0 0px 0 5px; font-size: 14px; color: #2fd0fe; }
+
+.f-lc-banner { width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 1; background: url("http://baiduworld.baidu.com/2015/images2015/banner.png") no-repeat center; }
+
+.f-lc-nav { width: 900px; height: 400px; position: relative; margin: 0px auto 0px auto; z-index: 4; }
+.f-lc-nav ul { width: 675px; height: 400px; position: absolute; top: 80px; left: 0px; background: url("http://baiduworld.baidu.com/2015/images2015/line.png") no-repeat 90px 30px; }
+.f-lc-nav li { width: 110px; height: 30px; position: absolute; background-color: #000000; border-radius: 15px; cursor: pointer; font-size: 16px; color: #03cafa; box-shadow: 0 0 10px rgba(3, 202, 250, 0.85); text-align: center; line-height: 28px; }
+.f-lc-nav li.active, .f-lc-nav li:hover { background-color: #03cafa; box-shadow: 0 0 0px rgba(3, 202, 250, 0); color: #000000; }
+.f-lc-nav .u-lc-a { left: 0px; bottom: 0px; }
+.f-lc-nav .u-lc-b { left: 15px; top: 235px; }
+.f-lc-nav .u-lc-c { left: 74px; top: 114px; }
+.f-lc-nav .u-lc-d { left: 198px; top: 27px; }
+.f-lc-nav .u-lc-e { left: 388px; top: 0px; }
+.f-lc-nav .u-lc-f { left: 565px; top: 50px; }
+.f-lc-nav .u-lc-g { left: 680px; top: 125px; }
+
+.m-lc-logo { width: 153px; height: 68px; position: absolute; left: 50%; top: 298px; margin: 0 0 0 -77px; z-index: 3; }
+
+.f-lc-countdown { width: 240px; height: 116px; position: absolute; top: 170px; left: 50%; margin: 0 0 0 270px; z-index: 3; background: url("http://baiduworld.baidu.com/2015/images2015/countdown-bg.png") no-repeat; background-size: 100% 100%; }
+.f-lc-countdown .u-lc-countdown-tit { width: 74px; height: 20px; position: absolute; top: 0px; left: 150px; }
+.f-lc-countdown .f-lc-countdown-time { width: 225px; height: 18px; position: absolute; left: 35px; top: 33px; }
+.f-lc-countdown .f-lc-countdown-time li { width: 12px; height: 14px; float: left; margin: 0 2px 0 0; }
+.f-lc-countdown .f-lc-countdown-time li:nth-of-type(3n) { margin-left: 2px; font-size: 12px; color: #2fd0fe; text-align: center; line-height: 22px; }
+.f-lc-countdown .f-lc-countdown-star { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; }
+.f-lc-countdown .f-lc-countdown-star li { position: absolute; }
+.f-lc-countdown .f-lc-countdown-star li:nth-of-type(1) { width: 51px; height: 51px; left: -25px; top: 20px; -webkit-animation: star 1000ms linear infinite alternate; -moz-animation: star 1000ms linear infinite alternate; -ms-animation: star 1000ms linear infinite alternate; -o-animation: star 1000ms linear infinite alternate; animation: star 1000ms linear infinite alternate; }
+.f-lc-countdown .f-lc-countdown-star li:nth-of-type(2) { width: 51px; height: 51px; left: 55px; top: 95px; -webkit-animation: star 1000ms linear infinite alternate; -moz-animation: star 1000ms linear infinite alternate; -ms-animation: star 1000ms linear infinite alternate; -o-animation: star 1000ms linear infinite alternate; animation: star 1000ms linear infinite alternate; }
+.f-lc-countdown .f-lc-countdown-star li:nth-of-type(3) { width: 40px; height: 40px; left: 88px; top: 65px; -webkit-animation: star 1000ms linear infinite alternate; -moz-animation: star 1000ms linear infinite alternate; -ms-animation: star 1000ms linear infinite alternate; -o-animation: star 1000ms linear infinite alternate; animation: star 1000ms linear infinite alternate; }
+.f-lc-countdown .f-lc-countdown-star li:nth-of-type(4) { width: 51px; height: 51px; left: 190px; top: 45px; -webkit-animation: star 1000ms linear infinite alternate; -moz-animation: star 1000ms linear infinite alternate; -ms-animation: star 1000ms linear infinite alternate; -o-animation: star 1000ms linear infinite alternate; animation: star 1000ms linear infinite alternate; }
+.f-lc-countdown .f-lc-countdown-star li:nth-of-type(5) { width: 51px; height: 51px; left: 213px; top: -5px; -webkit-animation: star 1000ms linear infinite alternate; -moz-animation: star 1000ms linear infinite alternate; -ms-animation: star 1000ms linear infinite alternate; -o-animation: star 1000ms linear infinite alternate; animation: star 1000ms linear infinite alternate; }
+.f-lc-countdown .f-lc-countdown-star li:nth-of-type(6) { width: 40px; height: 40px; left: 37px; top: -20px; -webkit-animation: star 1000ms linear infinite alternate; -moz-animation: star 1000ms linear infinite alternate; -ms-animation: star 1000ms linear infinite alternate; -o-animation: star 1000ms linear infinite alternate; animation: star 1000ms linear infinite alternate; }
+
+@-webkit-keyframes star { 0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; } }
+@-moz-keyframes star { 0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; } }
+@-o-keyframes star { 0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; } }
+@-ms-keyframes star { 0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; } }
+@keyframes star { 0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; } }
+.m-lc-yore { width: 80px; height: auto; position: absolute; left: 50%; top: 280px; margin: 0 0 0 540px; padding: 0 0 20px 0; overflow: hidden; z-index: 9; }
+.m-lc-yore .m-lc-yore-tit { width: 80px; height: 80px; margin: 0 0 10px 0; float: left; position: relative; z-index: 2; cursor: pointer; }
+.m-lc-yore ul { width: 70px; height: auto; margin: 0 0 0px 0px; padding: 0 5px; float: left; position: relative; z-index: 2; opacity: 0; overflow: hidden; }
+.m-lc-yore ul li { width: 60px; height: 20px; float: left; margin: 8px 0 10px 3px; background-color: #020a1f; box-shadow: 0 0 13px rgba(2, 129, 160, 0.75); border-radius: 12px; line-height: 22px; text-align: center; }
+.m-lc-yore ul li img { width: 8px; height: 8px; border: 0px; box-shadow: 0 0 0px rgba(2, 129, 160, 0.75); display: block; float: left; margin: 6px 1px; }
+.m-lc-yore ul li img:nth-of-type(1) { margin-left: 10px; }
+.m-lc-yore .u-lc-yore-line { width: 0px; height: auto; position: absolute; border-left: 1px solid #015773; left: 40px; top: 70px; bottom: 10px; z-index: 1; opacity: 0; }
+.m-lc-yore .u-lc-yore-line img { width: 16px; height: 16px; position: absolute; display: block; left: -8px; bottom: -6px; }
+
+.f-lc-video { width: 605px; height: 625px; float: left; }
+
+.f-lc-video-tab { width: 100%; height: 50px; float: left; margin: 7px 0 0 0; position: relative; z-index: 2; }
+.f-lc-video-tab ul { width: 100%; height: 50px; position: relative; }
+.f-lc-video-tab ul li { width: 120px; height: 50px; padding: 0 0 0 40px; position: absolute; background: url("http://baiduworld.baidu.com/2015/images2015/video-tab02.png") no-repeat; font-size: 14px; color: #03cafa; line-height: 60px; z-index: 1; cursor: pointer; }
+.f-lc-video-tab ul li.active { background: url("http://baiduworld.baidu.com/2015/images2015/video-tab01.png") no-repeat; color: #000000; z-index: 2; }
+.f-lc-video-tab ul li.u-lc-a { left: 0px; top: 0px; }
+.f-lc-video-tab ul li.u-lc-b { left: 123px; top: 0px; }
+
+.f_lc_more { width: 41px; height: 12px; position: absolute; right: 15px; top: 20px; cursor: pointer; }
+
+.f-lc-video-con { width: 605px; height: 369px; float: left; position: relative; margin: -11px 0 0 0; z-index: 1; background: url("http://baiduworld.baidu.com/2015/images2015/video-con.png") no-repeat; }
+.f-lc-video-con li { width: 581px; height: 345px; position: relative; float: left; position: relative; margin: 12px; display: none; background: url("http://baiduworld.baidu.com/2015/images2015/video-default.jpg") no-repeat; }
+
+.f-lc-video-box { width: 581px; height: 345px; position: absolute; left: 0px; top: 0px; z-index: 5; }
+.f-lc-video-box .f-lc-video-default { width: 100%; height: 100%; float: left; overflow: hidden; }
+.f-lc-video-box .f-lc-video-play { width: 78px; height: 78px; position: absolute; left: 50%; top: 50%; margin: -39px 0 0 -39px; z-index: 3; cursor: pointer; }
+.f-lc-video-box .f-lc-video-tit { width: 100%; height: 40px; position: absolute; left: 0px; bottom: 0px; padding: 0px 20px; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.6); font-size: 14px; line-height: 40px; color: #03cafa; }
+
+.g-lc-video-jieshao { width: 585px; height: 130px; float: left; margin: 12px 0 0 13px; }
+
+.g-lc-video-left { width: 290px; height: auto; float: left; overflow: hidden; }
+.g-lc-video-left .u-lc-img { width: 66px; height: 49px; float: left; margin: 0 0px 0 0; }
+.g-lc-video-left .g-lc-link { width: 224px; height: auto; float: left; margin: -3px 0px 0px 0px; font-size: 12px; line-height: 18px; color: #03cafa; }
+.g-lc-video-left .g-lc-link a { color: #03cafa; }
+
+.g-lc-video-right { width: 220px; height: 110px; float: right; overflow: hidden; }
+.g-lc-video-right .u-lc-txt { width: 100px; height: auto; float: left; margin: -3px 0px 0px 0px; font-size: 12px; line-height: 18px; color: #03cafa; }
+.g-lc-video-right .u-lc-img { width: 110px; height: 110px; float: left; }
+
+.g-lc-hyrc { width: 245px; height: 625px; float: right; }
+.g-lc-hyrc .u-lc-plate-tit { margin: 18px 0 0 0; }
+
+.g-lc-hyrc-zhu { width: 100%; height: 120px; margin: 22px 0 0 0; }
+.g-lc-hyrc-zhu .u-lc-tit { width: 105px; height: 26px; float: left; margin: 25px 0 0 100px; background-color: #03cafa; border-radius: 15px; font-size: 14px; line-height: 26px; text-align: center; cursor: pointer; }
+.g-lc-hyrc-zhu ul { width: 100%; height: auto; float: left; margin: 20px 0 0 0; }
+.g-lc-hyrc-zhu ul li { widht: 100%; height: 14px; float: left; margin: 5px 0 20px 0; font-size: 12px; color: #03cafa; line-height: 14px; white-space: nowrap; }
+.g-lc-hyrc-zhu ul li .u-lc-span-a { margin: 0 35px 0 50px; }
+.g-lc-hyrc-zhu ul li .u-lc-span-b { margin: 0 35px 0 45px; }
+.g-lc-hyrc-zhu ul li .u-lc-span-c { margin: 0 35px 0 40px; }
+.g-lc-hyrc-zhu ul li .u-lc-span-d { margin: 0 35px 0 35px; }
+.g-lc-hyrc-zhu ul li .u-lc-span-e { margin: 0 35px 0 30px; }
+.g-lc-hyrc-zhu ul li .u-lc-span-f { margin: 0 35px 0 25px; }
+
+.g-lc-hyrc-ul-fen { width: 100%; height: auto; margin: 35px 0 0 0; }
+.g-lc-hyrc-ul-fen .g-lc-tit { width: 100%; height: 26px; float: left; }
+.g-lc-hyrc-ul-fen .u-lc-tit { width: 105px; height: 26px; float: left; margin: 0px 30px 0 10px; background-color: #03cafa; border-radius: 15px; font-size: 14px; line-height: 26px; text-align: center; cursor: pointer; }
+.g-lc-hyrc-ul-fen .u-lc-time { float: left; font-size: 12px; color: #03cafa; line-height: 26px; }
+.g-lc-hyrc-ul-fen ul { width: 100%; height: auto; float: left; }
+.g-lc-hyrc-ul-fen ul li { width: 115px; min-height: 14px; height: auto; float: left; font-size: 12px; color: #03cafa; line-height: 14px; clear: left; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-a { margin: 35px 0 0 45px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-b { margin: 4px 0 0 135px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-c { margin: 16px 0 0 14px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-d { margin: 15px 0 0 130px; line-height: 20px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-e { margin: 12px 0 0 24px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-f { margin: 0px 0 0 160px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-g { margin: 22px 0 0 54px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-h { margin: 20px 0 0 100px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-i { margin: 20px 0 0 188px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-j { margin: 13px 0 0 54px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-k { margin: 5px 0 0 178px; }
+.g-lc-hyrc-ul-fen ul li.u-lc-li-l { margin: 35px 0 0 165px; }
+
+.g-lc-meeting { width: 480px; height: 360px; float: left; }
+.g-lc-meeting .u-lc-con { width: 359px; height: 105px; float: left; margin: 13px 0 0 -2px; padding: 70px 60px 60px 60px; background: url("http://baiduworld.baidu.com/2015/images2015/meeting-bg.png") no-repeat; font-size: 12px; color: #4dd6fd; line-height: 24px; cursor: pointer; }
+
+.g-lc-exhibition { width: 360px; height: 260px; float: right; margin: 35px 0 0; }
+.g-lc-exhibition .g-lc-con { width: 352px; height: 152px; float: left; position: relative; padding: 6px; margin: 20px 0 0 0; border: 1px solid #1b3855; border-radius: 6px; cursor: pointer; }
+.g-lc-exhibition .g-lc-con img { width: 100%; height: 100%; display: block; border-radius: 6px; }
+
+.m-lc-radius { width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; }
+.m-lc-radius li { width: 54px; height: 55px; position: absolute; }
+.m-lc-radius .u-lc-lefttop { left: -21px; top: -21px; background: url("http://baiduworld.baidu.com/2015/images2015/meeting-radius01.png") no-repeat; }
+.m-lc-radius .u-lc-righttop { right: -21px; top: -21px; background: url("http://baiduworld.baidu.com/2015/images2015/meeting-radius02.png") no-repeat; }
+.m-lc-radius .u-lc-rightbottom { right: -21px; bottom: -21px; background: url("http://baiduworld.baidu.com/2015/images2015/meeting-radius03.png") no-repeat; }
+.m-lc-radius .u-lc-leftbottom { left: -21px; bottom: -21px; background: url("http://baiduworld.baidu.com/2015/images2015/meeting-radius04.png") no-repeat; }
+
+.g-lc-product { width: 100%; height: auto; float: left; }
+.g-lc-product .u-lc-plate-tit img { margin-left: 405px; }
+
+.g-lc-product-con { width: 925px; height: 105px; float: left; margin: 38px 0 0 0px; }
+.g-lc-product-con li { height: 26px; padding: 0 20px; float: left; margin: 0 25px 14px 0px; border-radius: 15px; background-color: #000000; box-shadow: 0 0 15px #0281a0; font-size: 14px; line-height: 26px; text-align: center; color: #68dcfd; }
+
+.g-lc-guests { width: 100%; height: 310px; float: left; }
+
+.g-lc-guests-list { width: 100%; height: 280px; float: left; position: relative; margin: 30px 0 0 0; }
+.g-lc-guests-list ul { width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; }
+.g-lc-guests-list ul li { width: 135px; height: 280px; float: left; margin: 0 30px 0 15px; cursor: pointer; }
+.g-lc-guests-list ul li.s-lc-a .u-lc-guests-img { padding: 23px 20px 22px 22px; background-image: url("http://baiduworld.baidu.com/2015/images2015/guests-bg01.png"); }
+.g-lc-guests-list ul li.s-lc-b .u-lc-guests-img { width: 94px; height: 94px; margin-top: 3px; padding: 24px 19px 21px 24px; background-image: url("http://baiduworld.baidu.com/2015/images2015/guests-bg02.png"); }
+.g-lc-guests-list ul li.s-lc-c .u-lc-guests-img { width: 94px; height: 94px; margin-top: 7px; padding: 20px 22px 20px 21px; background-image: url("http://baiduworld.baidu.com/2015/images2015/guests-bg03.png"); }
+.g-lc-guests-list ul li.s-lc-d .u-lc-guests-img { width: 94px; height: 94px; margin-top: 13px; padding: 18px 19px 18px 18px; background-image: url("http://baiduworld.baidu.com/2015/images2015/guests-bg03.png"); }
+.g-lc-guests-list ul li img { border-radius: 100px; }
+
+.u-lc-guests-img { width: 95px; height: 95px; background-repeat: no-repeat; background-position: center; }
+
+.u-lc-guests-txt { width: 150px; height: auto; margin: 10px 0 0 0; overflow: hidden; font-size: 12px; line-height: 20px; color: #03cafa; text-align: center; }
+
+.g-lc-news { width: 250px; height: 285px; float: left; margin: 0 0 0 45px; display: none; }
+
+.f-lc-news-list { width: 255px; height: 215px; float: left; position: relative; margin: 32px 0 0 0; }
+.f-lc-news-list ul { width: 100%; height: auto; position: absolute; overflow: hidden; border-top: 1px dashed #03cafa; }
+.f-lc-news-list ul li { width: 100%; height: 42px; float: left; padding: 0 5px; position: relative; border-bottom: 1px dashed #03cafa; box-sizing: border-box; font-size: 12px; color: #03cafa; line-height: 42px; }
+.f-lc-news-list ul li a { color: #03cafa; }
+
+.f-lc-map { width: 670px; height: 235px; float: left; position: relative; margin: 100px 0 0 0; background-color: #ffffff; box-shadow: 0 0 20px #0281a0; border-radius: 10px; }
+
+.g-lc-contact { width: 185px; height: auto; float: right; margin: 130px 0 0 0; }
+
+.u-lc-contact { width: 100%; height: auto; float: left; margin: 15px 0; overflow: hidden; font-size: 12px; color: #03cafa; line-height: 30px; }
+
+.u-lc-more { width: 100%; float: left; }
+.u-lc-more img { cursor: pointer; }
+
+.g-lc-teamwork { width: 100%; height: auto; float: left; overflow: hidden; }
+
+.m-lc-teamwork-list { width: 100%; height: auto; float: left; padding: 5px 0px 0px 0px; margin: 15px 0px 0 0; overflow: hidden; background-color: #1d1d1d; }
+.m-lc-teamwork-list li { width: 92px; height: 36px; float: left; margin: 0 9px 5px 0; }
+.m-lc-teamwork-list li a, .m-lc-teamwork-list li img { width: 100%; height: 100%; display: block; }
+
+.f-lc-window { width: 100%; min-height: 100%; height: auto; position: fixed; top: 0px; left: 0px; z-index: 999999999; background: url("http://baiduworld.baidu.com/2015/images2015/alert-bg.png") no-repeat center rgba(0, 0, 0, 0.9); }
+
+.f-lc-tab { width: 100%; height: auto; float: left; overflow: hidden; padding: 12px 15px; }
+.f-lc-tab li { height: 24px; float: left; padding: 0 20px; margin: 0 35px 15px 0; display: block; box-shadow: 0 0 15px #0281a0; border-radius: 15px; cursor: pointer; font-size: 14px; color: #68dcfd; line-height: 24px; }
+.f-lc-tab li.active { background-color: #68dcfd; color: #000000; }
+
+.f-lc-alert-shipin { width: 953px; height: 678px; position: absolute; left: 50%; top: 50%; margin: -310px 0 0 -476px; background: url("http://baiduworld.baidu.com/2015/images2015/alert-shipin.png") no-repeat; }
+.f-lc-alert-shipin .u-lc-tit { width: 100%; height: 22px; position: absolute; top: 0px; left: 150px; z-index: 9; }
+.f-lc-alert-shipin .f-lc-close { width: 27px; height: 27px; position: absolute; right: 45px; top: 15px; cursor: pointer; }
+.f-lc-alert-shipin .g-lc-con { width: 770px; height: auto; float: left; position: relative; margin: 90px 0 0 115px; }
+.f-lc-alert-shipin .f-lc-shipin-ul { width: 720px; height: auto; float: left; overflow: hidden; }
+.f-lc-alert-shipin .f-lc-shipin-ul li { width: 100%; height: 118px; float: left; padding: 0 0 35px 0; margin: 0 0 15px 0; border-bottom: 1px dashed #235461; }
+.f-lc-alert-shipin .f-lc-shipin-ul .g-lc-shipin-left { width: 198px; height: 118px; float: left; position: relative; margin: 10px 40px 0 10px; box-shadow: 0 0 15px #2fd0fe; }
+.f-lc-alert-shipin .f-lc-shipin-ul .g-lc-shipin-left .u-lc-shipin-img { width: 100%; height: 100%; float: left; }
+.f-lc-alert-shipin .f-lc-shipin-ul .g-lc-shipin-left .u-lc-shipin-play { width: 43px; height: 43px; position: absolute; left: 50%; top: 50%; margin: -21px 0 0 -21px; z-index: 2; cursor: pointer; }
+.f-lc-alert-shipin .f-lc-shipin-ul .g-lc-shipin-left img { width: 100%; height: 100%; display: block; }
+.f-lc-alert-shipin .f-lc-shipin-ul .g-lc-shipin-right { width: 470px; height: 118px; float: left; margin: 10px 0 0 0; font-size: 14px; color: #68dcfd; line-height: 118px; }
+
+.f-lc-scroll-box { width: 750px; height: 300px; float: left; position: relative; margin: 20px 0 0 0; overflow: hidden; }
+
+.f-lc-scroll-bar { width: 100%; height: auto; position: absolute; left: 0px; top: 0px; overflow: hidden; }
+
+.f-lc-bar-box { width: 7px; height: 100%; position: absolute; right: 0px; top: 0px; background-color: rgba(104, 220, 253, 0.1); border-radius: 8px; }
+.f-lc-bar-box .f-lc-bar-bar { width: 7px; height: 50px; position: absolute; left: 0px; top: 0px; background-color: #68dcfd; border-radius: 8px; cursor: pointer; }
+
+.g-lc-shipin-info { width: 720px; height: 470px; float: left; margin: 100px 0 0 120px; }
+.g-lc-shipin-info .f-lc-shipin-info-back { float: left; padding: 0 20px; height: 25px; box-shadow: 0 0 15px #0281a0; border-radius: 15px; cursor: pointer; font-size: 14px; color: #68dcfd; line-height: 24px; }
+.g-lc-shipin-info .f-lc-shipin-info-con { width: 610px; height: auto; float: left; clear: left; margin: 10px 0 0 45px; padding: 15px; overflow: hidden; }
+.g-lc-shipin-info .f-lc-shipin-info-tit { width: 100%; height: auto; float: left; overflow: hidden; font-size: 14px; color: #68dcfd; line-height: 20px; }
+.g-lc-shipin-info .f-lc-shipin-info-txt { width: 581px; height: 345px; float: left; position: relative; margin: 20px 0 0 0; box-shadow: 0 0 20px #2fd0fe; }
+.g-lc-shipin-info .u-lc-shipin-info-img { width: 100%; height: 100%; float: left; overflow: hidden; }
+.g-lc-shipin-info .f-lc-shipin-info-play { width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 999; }
+.g-lc-shipin-info .u-lc-shipin-info-btn { width: 73px; height: 73px; position: absolute; left: 50%; top: 50%; margin: -36px 0 0 -36px; cursor: pointer; }
+.g-lc-shipin-info .f_lc_video { width: 581px; height: 345px; float: left; overflow: hidden; }
+.g-lc-shipin-info img { width: 100%; height: 100%; display: block; }
+
+.f-lc-hwlx { width: 991px; height: 665px; position: absolute; left: 50%; top: 50%; margin: -320px 0 0 -495px; background: url("http://baiduworld.baidu.com/2015/images2015/hwlx-bg.png") no-repeat; }
+.f-lc-hwlx .u-lc-tit { width: 400px; height: 22px; position: absolute; left: 140px; top: 27px; }
+.f-lc-hwlx .f-lc-close { width: 27px; height: 27px; position: absolute; right: 70px; top: 45px; cursor: pointer; }
+.f-lc-hwlx .g-lc-con { width: 770px; height: auto; float: left; position: relative; margin: 120px 0 0 115px; }
+.f-lc-hwlx .g-lc-hwlx-tit { width: 725px; height: 50px; float: left; margin: 11px 0 0 18px; font-size: 18px; color: #68dcfd; line-height: 50px; text-align: center; }
+.f-lc-hwlx .g-lc-hwlx-tit li { float: left; }
+.f-lc-hwlx .g-lc-hwlx-tit .u-lc-left { width: 90px; margin: 0 134px 0 0; }
+.f-lc-hwlx .g-lc-hwlx-tit .u-lc-main { width: 150px; margin: 0 78px 0 0; }
+.f-lc-hwlx .g-lc-hwlx-tit .u-lc-right { width: 250px; }
+.f-lc-hwlx .f-lc-scroll-box { width: 725px; height: 210px; float: left; position: relative; margin: 18px 0 0 16px; }
+.f-lc-hwlx .f-lc-hwlx-ul { width: 100%; height: auto; float: left; overflow: hidden; }
+.f-lc-hwlx .f-lc-hwlx-ul li { width: 100%; height: 38px; float: left; overflow: hidden; font-size: 12px; color: #68dcfd; line-height: 38px; text-align: center; }
+.f-lc-hwlx .f-lc-hwlx-ul .u-lc-left { width: 90px; height: 50px; margin: 0 134px 0 0; float: left; position: relative; background: url("http://baiduworld.baidu.com/2015/images2015/arc.png") no-repeat left center; }
+.f-lc-hwlx .f-lc-hwlx-ul .u-lc-main { width: 150px; height: 50px; margin: 0 78px 0 0; float: left; }
+.f-lc-hwlx .f-lc-hwlx-ul .u-lc-right { width: 250px; height: 50px; float: left; }
+
+.f-lc-hyrc { width: 991px; height: 665px; position: absolute; left: 50%; top: 50%; margin: -325px 0 0 -495px; background: url("http://baiduworld.baidu.com/2015/images2015/hwlx-bg.png") no-repeat; }
+.f-lc-hyrc .u-lc-tit { width: 400px; height: 22px; position: absolute; left: 140px; top: 27px; }
+.f-lc-hyrc .f-lc-close { width: 27px; height: 27px; position: absolute; right: 70px; top: 45px; cursor: pointer; }
+.f-lc-hyrc .g-lc-con { width: 770px; height: auto; float: left; position: relative; margin: 120px 0 0 115px; }
+.f-lc-hyrc .g-lc-hyrc-tit { width: 725px; height: 50px; float: left; margin: 11px 0 0 18px; font-size: 18px; color: #68dcfd; line-height: 50px; text-align: center; }
+.f-lc-hyrc .g-lc-hyrc-tit li { float: left; }
+.f-lc-hyrc .g-lc-hyrc-tit .u-lc-left { width: 150px; margin: 0 0px 0 0; }
+.f-lc-hyrc .g-lc-hyrc-tit .u-lc-main { width: 320px; margin: 0 10px; }
+.f-lc-hyrc .g-lc-hyrc-tit .u-lc-right { width: 220px; }
+.f-lc-hyrc .f-lc-scroll-box { width: 725px; height: 210px; float: left; position: relative; margin: 18px 0 0 16px; }
+.f-lc-hyrc .f-lc-hyrc-ul { width: 100%; height: auto; float: left; overflow: hidden; }
+.f-lc-hyrc .f-lc-hyrc-ul li { width: 100%; height: auto; float: left; margin-bottom: 15px; overflow: hidden; font-size: 12px; color: #68dcfd; line-height: 20px; text-align: center; border-bottom: 0px dashed #047e9d; /* &.title3{ .u-lc-left,.u-lc-main{margin-top:20px;} } &.title4{ .u-lc-left,.u-lc-main{margin-top:30px;} } &.title5{ .u-lc-left,.u-lc-main{margin-top:50px;} } &.title6{ .u-lc-left,.u-lc-main{margin-top:60px;} } &.title7{ .u-lc-left,.u-lc-main{margin-top:70px;} } */ }
+.f-lc-hyrc .f-lc-hyrc-ul li.zhu, .f-lc-hyrc .f-lc-hyrc-ul li.ren, .f-lc-hyrc .f-lc-hyrc-ul li.kaifangyun { height: 60px; overflow: hidden; }
+.f-lc-hyrc .f-lc-hyrc-ul li.zhu .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.zhu .u-lc-main, .f-lc-hyrc .f-lc-hyrc-ul li.ren .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.ren .u-lc-main, .f-lc-hyrc .f-lc-hyrc-ul li.kaifangyun .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.kaifangyun .u-lc-main { margin-top: 20px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.zhu.title1 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.ren.title1 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.kaifangyun.title1 .u-lc-right { margin-top: 20px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.zhu.title2 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.ren.title2 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.kaifangyun.title2 .u-lc-right { margin-top: 5px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yidong { height: 140px; overflow: hidden; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yidong .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.yidong .u-lc-main { margin-top: 40px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yidong.title1 .u-lc-right { margin-top: 40px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yidong.title2 .u-lc-right { margin-top: 30px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yidong.title3 .u-lc-right { margin-top: 25px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yidong.title4 .u-lc-right { margin-top: 10px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yingxiao { height: 90px; overflow: hidden; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yingxiao .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.yingxiao .u-lc-main { margin-top: 40px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yingxiao.title1 .u-lc-right { margin-top: 40px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yingxiao.title2 .u-lc-right { margin-top: 30px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yingxiao.title3 .u-lc-right { margin-top: 25px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.yingxiao.title4 .u-lc-right { margin-top: 10px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.shuzi, .f-lc-hyrc .f-lc-hyrc-ul li.yiliao, .f-lc-hyrc .f-lc-hyrc-ul li.hulianwang, .f-lc-hyrc .f-lc-hyrc-ul li.guojihua, .f-lc-hyrc .f-lc-hyrc-ul li.nuomi { height: 60px; overflow: hidden; }
+.f-lc-hyrc .f-lc-hyrc-ul li.shuzi .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.shuzi .u-lc-main, .f-lc-hyrc .f-lc-hyrc-ul li.yiliao .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.yiliao .u-lc-main, .f-lc-hyrc .f-lc-hyrc-ul li.hulianwang .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.hulianwang .u-lc-main, .f-lc-hyrc .f-lc-hyrc-ul li.guojihua .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.guojihua .u-lc-main, .f-lc-hyrc .f-lc-hyrc-ul li.nuomi .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.nuomi .u-lc-main { margin-top: 20px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.shuzi.title1 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.yiliao.title1 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.hulianwang.title1 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.guojihua.title1 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.nuomi.title1 .u-lc-right { margin-top: 20px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.shuzi.title2 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.yiliao.title2 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.hulianwang.title2 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.guojihua.title2 .u-lc-right, .f-lc-hyrc .f-lc-hyrc-ul li.nuomi.title2 .u-lc-right { margin-top: 5px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.dashuju { height: 60px; overflow: hidden; }
+.f-lc-hyrc .f-lc-hyrc-ul li.dashuju .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.dashuju .u-lc-main { margin-top: 20px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.dashuju.title1 .u-lc-right { margin-top: 20px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.dashuju.title2 .u-lc-right { margin-top: 5px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.dashuju.title8 { height: 160px; }
+.f-lc-hyrc .f-lc-hyrc-ul li.dashuju.title8 .u-lc-left, .f-lc-hyrc .f-lc-hyrc-ul li.dashuju.title8 .u-lc-main { margin-top: 70px; }
+.f-lc-hyrc .f-lc-hyrc-ul .u-lc-left { width: 150px; height: auto; min-height: 20px; margin: 0 0px 0 0; float: left; position: relative; background: url("http://baiduworld.baidu.com/2015/images2015/arc.png") no-repeat left center; }
+.f-lc-hyrc .f-lc-hyrc-ul .u-lc-main { width: 320px; height: auto; min-height: 20px; margin: 0 10px; float: left; }
+.f-lc-hyrc .f-lc-hyrc-ul .u-lc-right { width: 220px; height: auto; min-height: 20px; float: left; overflow: hidden; }
+
+.f-lc-dhjj { width: 952px; height: 582px; position: absolute; left: 50%; top: 50%; margin: -290px 0 0 -476px; background: url("http://baiduworld.baidu.com/2015/images2015/dhjj-bg.png") no-repeat; }
+.f-lc-dhjj .u-lc-tit { width: 400px; height: 22px; position: absolute; left: 110px; top: 95px; }
+.f-lc-dhjj .f-lc-close { width: 27px; height: 27px; position: absolute; right: 26px; top: 135px; cursor: pointer; }
+.f-lc-dhjj .g-lc-con { width: 545px; height: 300px; float: left; position: relative; margin: 225px 0 0 170px; }
+.f-lc-dhjj .u-lc-top { width: 100%; height: auto; float: left; margin: 0 0 20px 0; overflow: hidden; font-size: 14px; color: #68dcfd; line-height: 30px; }
+.f-lc-dhjj .u-lc-foot { width: 100%; height: auto; float: left; overflow: hidden; font-size: 14px; color: #68dcfd; line-height: 30px; }
+
+.f-lc-xwdt { width: 901px; height: 585px; position: absolute; left: 50%; top: 50%; margin: -290px 0 0 -450px; background: url("http://baiduworld.baidu.com/2015/images2015/xwdt-bg.png") no-repeat; }
+.f-lc-xwdt .u-lc-tit { width: 400px; height: 22px; position: absolute; left: 100px; top: 0px; }
+.f-lc-xwdt .f-lc-close { width: 27px; height: 27px; position: absolute; right: 42px; top: 0px; cursor: pointer; }
+.f-lc-xwdt .g-lc-con { width: 590px; height: 290px; float: left; position: relative; margin: 120px 0 0 147px; }
+.f-lc-xwdt .f-lc-scroll-box { width: 590px; height: 290px; margin: 0px; }
+.f-lc-xwdt .f-lc-scroll-bar { width: 575px; }
+.f-lc-xwdt .f-lc-xwdt-ul { width: 575px; height: auto; float: left; overflow: hidden; }
+.f-lc-xwdt .f-lc-xwdt-ul li { width: 555px; height: 40px; float: left; padding: 0 0 0 20px; overflow: hidden; font-size: 12px; line-height: 40px; background: url("http://baiduworld.baidu.com/2015/images2015/arc.png") no-repeat left center; }
+.f-lc-xwdt .f-lc-xwdt-ul li a { color: #68dcfd; }
+.f-lc-xwdt .f-lc-xwdt-ul li a:hover { text-decoration: underline; }
+
+.f-lc-alert-guests { width: 922px; height: 627px; position: absolute; left: 50%; top: 50%; margin: -300px 0 0 -461px; background: url("http://baiduworld.baidu.com/2015/images2015/jbjs-bg.png") no-repeat; }
+.f-lc-alert-guests .u-lc-tit { width: 400px; height: 22px; position: absolute; top: 48px; left: 165px; z-index: 9; }
+.f-lc-alert-guests .f-lc-close { width: 27px; height: 27px; position: absolute; right: 26px; top: 40px; cursor: pointer; }
+.f-lc-alert-guests .g-lc-con { width: 680px; height: auto; float: left; position: relative; margin: 120px 0 0 150px; }
+.f-lc-alert-guests .f-lc-tab li { margin-right: 20px; }
+.f-lc-alert-guests .f-lc-scroll-box { width: 650px; height: 295px; margin-top: 0px; }
+.f-lc-alert-guests .f-lc-scroll-bar { width: 605px; height: auto; left: 10px; overflow: hidden; }
+.f-lc-alert-guests .f-lc-guests-ul { width: 100%; height: auto; float: left; overflow: hidden; }
+.f-lc-alert-guests .f-lc-guests-ul li { width: 100%; height: 128px; float: left; padding: 2px 0 15px 0; margin: 0 0 15px 0; border-bottom: 1px dashed #235461; }
+.f-lc-alert-guests .g-lc-guests-left { width: 120px; height: 120px; float: left; border: 4px solid #173038; border-radius: 80px; }
+.f-lc-alert-guests .g-lc-guests-left .u-lc-img { width: 120px; height: 120px; border-radius: 80px; }
+.f-lc-alert-guests .g-lc-guests-left .u-lc-img img { width: 100%; height: 100%; display: block; border-radius: 80px; }
+.f-lc-alert-guests .g-lc-guests-right { width: 450px; height: auto; float: left; margin: 0px 0 0 20px; overflow: hidden; }
+.f-lc-alert-guests .g-lc-guests-right a { font-size: 12px; display: block; float: right; color: #68dcfd; }
+.f-lc-alert-guests .g-lc-guests-right a:hover { text-decoration: underline; }
+.f-lc-alert-guests .u-lc-text { width: 100%; height: 75px; float: left; margin: 15px 0 0 0; font-size: 12px; line-height: 24px; color: #68dcfd; }
+.f-lc-alert-guests .u-lc-text span { margin-right: 20px; }
+.f-lc-alert-guests .u-lc-text .u-lc-name { width: 100%; height: 24px; float: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.f-lc-alert-guests .u-lc-text .u-lc-info { width: 100%; height: 48px; float: left; overflow: hidden; }
+
+.g-guests-info .f-lc-guests-info-back { float: left; padding: 0 20px; height: 25px; margin: 10px 0 0 10px; box-shadow: 0 0 15px #0281a0; border-radius: 15px; cursor: pointer; font-size: 14px; color: #68dcfd; line-height: 24px; }
+.g-guests-info .g-lc-guests-left { clear: left; margin: 35px 15px 0px 0; }
+.g-guests-info .f-lc-scroll-box { width: 485px; height: 310px; margin: 35px 0 0 15px; }
+.g-guests-info .f-lc-scroll-bar { width: 455px; height: auto; overflow: hidden; }
+.g-guests-info .g-lc-neirong { width: 100%; height: auto; float: left; overflow: hidden; }
+.g-guests-info .u-lc-title { width: 100%; height: auto; float: left; font-size: 18px; color: #68dcfd; }
+.g-guests-info .u-lc-job { width: 100%; height: auto; float: left; margin: 5px 0 10px 0; font-size: 12px; color: #68dcfd; line-height: 24px; }
+.g-guests-info .u-lc-text { height: auto; margin: 0px 0 0 0; overflow: hidden; }
+
+.f-lc-alert-exhibition { width: 989px; height: 609px; position: absolute; left: 50%; top: 50%; margin: -300px 0 0 -461px; background: url("http://baiduworld.baidu.com/2015/images2015/zqjs-bg.png") no-repeat; }
+.f-lc-alert-exhibition .u-lc-tit { width: 400px; height: 22px; position: absolute; top: 5px; left: 70px; z-index: 9; }
+.f-lc-alert-exhibition .f-lc-close { width: 27px; height: 27px; position: absolute; right: 52px; top: 14px; cursor: pointer; }
+.f-lc-alert-exhibition .g-lc-con { width: 770px; height: auto; float: left; position: relative; margin: 90px 0 0 115px; }
+.f-lc-alert-exhibition .f-lc-tab { width: 100%; height: auto; float: left; overflow: hidden; padding: 9px 9px; }
+.f-lc-alert-exhibition .f-lc-tab li { height: 24px; float: left; padding: 0 15px; margin: 0 30px 15px 0; display: block; box-shadow: 0 0 15px #0281a0; border-radius: 15px; cursor: pointer; font-size: 14px; color: #68dcfd; line-height: 24px; }
+.f-lc-alert-exhibition .f-lc-tab li.active { background-color: #68dcfd; color: #000000; }
+.f-lc-alert-exhibition .f-lc-scroll-box { width: 730px; height: 265px; margin: 20px 0 0 5px; }
+.f-lc-alert-exhibition .f-lc-scroll-bar { width: 665px; height: auto; overflow: hidden; }
+.f-lc-alert-exhibition .f-lc-exhibition-ul { width: 100%; height: auto; float: left; overflow: hidden; }
+.f-lc-alert-exhibition .f-lc-exhibition-ul li { width: 100%; min-height: 110px; height: auto; padding: 0 0 10px 0; float: left; margin: 0 0 30px 0; border-bottom: 1px dashed #235461; }
+.f-lc-alert-exhibition .f-lc-exhibition-ul li:nth-last-of-type(1) { border-bottom: 0px; }
+.f-lc-alert-exhibition .g-lc-exhibition-left { width: 120px; height: 62px; border: 4px solid #173038; float: left; border-radius: 4px; }
+.f-lc-alert-exhibition .g-lc-exhibition-left img { width: 100%; height: 100%; display: block; }
+.f-lc-alert-exhibition .g-lc-exhibition-right { width: 520px; height: auto; float: left; margin: 0 0 0 15px; overflow: hidden; font-size: 12px; color: #68dcfd; line-height: 24px; }
+.f-lc-alert-exhibition .g-lc-exhibition-right a { color: #68dcfd; display: block; line-height: 14px; float: right; }
+.f-lc-alert-exhibition .g-lc-exhibition-right a:hover { text-decoration: underline; }
+.f-lc-alert-exhibition .u-lc-title { width: 100%; height: auto; float: left; overflow: hidden; }
+.f-lc-alert-exhibition .u-lc-text { width: 100%; height: auto; float: left; overflow: hidden; }
+
+.g-exhibition-info .f-lc-exhibition-info-back { float: left; padding: 0 20px; height: 25px; margin-right: 600px; box-shadow: 0 0 15px #0281a0; border-radius: 15px; cursor: pointer; font-size: 14px; color: #68dcfd; line-height: 24px; }
+.g-exhibition-info .g-lc-exhibition-left { margin-top: 50px; margin-right: 15px; }
+.g-exhibition-info .f-lc-scroll-box { width: 590px; height: 310px; margin-top: 50px; }
+.g-exhibition-info .f-lc-scroll-bar { width: 545px; height: auto; overflow: hidden; }
+.g-exhibition-info .u-lc-title { width: 100%; height: auto; float: left; overflow: hidden; font-size: 18px; color: #68dcfd; line-height: 24px; }
+.g-exhibition-info .u-lc-text { width: 100%; height: auto; float: left; margin: 10px 0 0px 0; overflow: hidden; font-size: 12px; color: #68dcfd; line-height: 24px; }
+
+.f-lc-jingqingqidai { width: 783px; height: 292px; position: absolute; left: 50%; top: 50%; margin: -146px 0 0 -391px; background: url("http://baiduworld.baidu.com/2015/images2015/jqqd-bg.png") no-repeat; }
+.f-lc-jingqingqidai .f-lc-close { width: 27px; height: 27px; position: absolute; right: 52px; top: 14px; cursor: pointer; }
+.f-lc-jingqingqidai .u-lc-jingqingqidai-text { width: 94px; height: 21px; position: absolute; left: 322px; top: 146px; }
+
+.f-lc-back { position: absolute; left: 460px; bottom: 30px; padding: 0 20px; height: 25px; background-color: #000000; box-shadow: 0 0 15px #0281a0; border-radius: 15px; cursor: pointer; font-size: 14px; color: #68dcfd; line-height: 24px; }
+
+.f-lc-hyrc .f-lc-back { bottom: 50px; }
+
+.f-lc-hwlx .f-lc-back { bottom: 60px; }
+
+/*# sourceMappingURL=index.css.map */
