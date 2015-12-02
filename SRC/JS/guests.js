@@ -207,6 +207,72 @@ var guests = {
 
     ],
     //移动分发论坛
+     "yidong" : [
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/xgc.jpg",
+            "name" : "熊贵成",
+            "job" : "百度移动服务事业群组移动分发事业部总经理",
+            "info" : "主要负责百度手机助手业务（北区）和91福州分发业务（南区），为搭建南北业务沟通桥梁以及百度手机助手与91助手的融合做出了巨大贡献，致力于提升分发业务团队的能动性和集团战斗力，构建百度统一移动分发品牌战略，积极拓展海外分发业务，将分发业务打造成为移动互联网时代的核心竞争力。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/xz.jpg",
+            "name" : "熊振",
+            "job" : "百度移动分发事业部副总经理",
+            "info" : "10年互联网行业从业经验。百度早期的PM之一，曾作为创始团队成员，负责具有鲜明百度特色的MP3搜索和视频搜索业务。后供职迅雷，在迅雷6年间历任：搜索产品负责人，商务产品、大区销售总经理，全国策略中心总经理多个职位，具备相当丰富的互联网产品及市场经验。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/gxy.jpg",
+            "name" : "郭湘琰",
+            "job" : "百度移动分发事业部产品研发中心高级经理",
+            "info" : "主要负责百度手机助手产品的团队管理和业务规划，并负责百度手机助手与91手机助手、安卓市场的整合工作。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/zy.jpg",
+            "name" : "朱颖",
+            "job" : "百度移动分发事业部运营中心高级经理",
+            "info" : "主要负责包括百度手机助手、91助手、安卓市场等移动分发事业部所有产品的运营、开发者生态工作。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/sl.jpg",
+            "name" : "苏亮",
+            "job" : "百度移动分发事业部产品生态高级经理",
+            "info" : "主要负责开发者中心，app分发策略，app数据端的团队管理工作。规划实施面向开发者的产品生态体系，以及面向用户的精准分发能力。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/zt.jpg",
+            "name" : "赵婷",
+            "job" : "百度分发事业部副总经理",
+            "info" : "从2000年至今，赵婷女士先后在灵智、电通、好耶从事网络媒体研究、计划、产品定位、运营、创新、销售规划等工作，积累了丰富的网络营销和管理经验。先后在这些互联网广告公司任职媒介经理、媒介总监、媒介总经理、副总裁等职务。通过10年以上互联网广告工作经验，对客户、市场、网络应用有着深刻认知和实际操作经验，同时对搜索和精准营销有独特见解，曾为众多品牌客户提供有效的互联网解决方案。"+
+            "Ms. Zhao Ting"+
+            "Before joining Baidu, Zhao Ting has been worked in well-known online advertising companies since 2000, such as RSCG,Dentsu and Allyes. She has held position of media manager, media Director, General Manager and VP in these companies, focused on internet media research, planning, product positioning, operation and innovation. With 10 years rich experiences in online marketing and management, Zhao Ting has deep recognition and Wide knowledge on customer service, online marketing and application, as well as her unique understanding on search area and targeting marketing. Also, Zhao Ting has provided efficient online marketing solution for most brand clients."
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/dxs.jpg",
+            "name" : "丁晓森",
+            "job" : "百度移动分发事业部助理总经理，移动生态变现中心负责人",
+            "info" : "近10年互联网营销经历，经历搜索，视频大潮。加入移动分发事业部曾负责变现，生态与资源运营管理，搭建优化销售体系。现负责变现生态业务。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/fym.jpg",
+            "name" : "方益民",
+            "job" : "百度投资并购部执行总监",
+            "info" : "拥有长达十六年的互联网、电子商务、金融服务、创业投资相关行业从事高级管理工作的经验。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/lch.jpg",
+            "name" : "郎春晖",
+            "job" : "创新工场合伙人",
+            "info" : "拥有北京工业大学自动控制学士学位，和北京大学MBA学位。郎女士有着十多年TMT产业投资与研究经验。加入创新工场前供职于易观国际，历任研究总监、咨询总监、助理总裁。覆盖的领域包括移动互联网、电子商务等。服务过的客户包括摩根斯坦利、MIH、华平、WRH、中国移动、中国电信、Google、Microsoft、Intel、IBM、腾讯、百度等众多投资及TMT领域顶级公司。更早期为联合国工发组织（UNIDO,UK）项目专家和复华证券北京代表处经理。现为互联网协会营销分会特聘专家委员。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/zq2.jpg",
+            "name" : "赵沁",
+            "job" : "唯品会市场高级总监",
+            "info" : "现任唯品会移动事业部市场高级总监，移动互联网营销运营和渠道推广经验的市场专家。 在移动互联网的早期，赵沁就成功操盘了国内第一大手机桌面应用——GO桌面的国内外市场工作（GO桌面所属的久邦数码于2013年成功在美国纽约上市）" +
+            "2013年，赵沁加盟刚正式成立不久的唯品会移动事业部，历任市场推广、营销运营等工作。在其任职期间，唯品会移动端的销售占比从不足20%提升至75%，在各大传统电商中占据绝对领先的地位。其领导的移动市场团队，在2014年电商类App渠道覆盖、下载量的达到业内领先的水平，并获得应用宝、百度91等分发渠道最佳突破、最具影响力、最具购物影响力等大奖。其领导的移动营销运营团队，成功操盘了2014年唯品会移动端的“418一场史无前例特卖会“、”唯品会欢购6周年“等具有行业影响力的营销活动。2015年4月20日，更成功策划了国内电商第一个微信朋友圈互动广告；其统筹的2015年唯品会“618星品牌 新特卖”大型促销活动，成为唯品会历年来业绩最好的促销项目。"
+        }
+    ],
+    //数字内容论坛
     
     
     
