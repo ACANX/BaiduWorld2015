@@ -345,6 +345,79 @@ var guests = {
             "司。百度的成功，也使中国成为美国、俄罗斯、和韩国之外球仅有的4个拥有搜索引擎核心技术的国家之一。2009年百度技术创新大会上，李"
         }
     ],
-    
+    //国际化论坛
+    "guojihua" : [
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/at.jpg",
+            "name" : "Alex Tabor",
+            "job" : "Co-Founder and CEO of Peixe Urbano",
+            "info" : "In 2010, Alex Tabor co-founded Peixe Urbano, Brazil’s first Group Buying site. Peixe Urbano quickly grew to over 25 million users in Brazil (a country of 80 million internet users) and won the Crunchies Awards, one of the highest recognitions for internet startups in Silicon Valley, as the best international startup of the year in 2012. As one of Brazil's fastest growing internet companies, Peixe Urbano is currently an important player in the O2O space, leading the industry nationally."+
+            "A Computer Science graduate from the University of Southern California, Alex worked as Software Architect for Power.com, a social media integrator, and then founded his own software development startup that catered to international clients before launching Peixe Urbano. Tabor is half-Brazilian, half-American and has lived in several countries around the world. His passion for information technology was apparent since childhood, as he launched India's first online graphic community, a BBS (Bulletin Board System), at age 13."
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/ct.jpg",
+            "name" : "程涛",
+            "job" : "popIn CEO",
+            "info" : "2008年在日本的东京大学里上学时创建popIn, 为日本200家以上的主流媒体提供推荐和原生广告服务。2015年6月 百度收购popIn后加入百度，继续负责popIn原生广告在日本的发展。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/hy.jpg",
+            "name" : "胡勇",
+            "job" : "百度国际事业部总经理",
+            "info" : "2012年加入百度，现任百度国际事业部总经理。胡勇先生主要负责统管百度国际业务，目前已在巴西、日本、泰国、印尼、埃及、印度成立多个分公司或办事处，同时自主开发多个投放于海外市场的PC端和移动端产品。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/tcl.jpg",
+            "name" : "唐才林",
+            "job" : "国际化产品部副总监",
+            "info" : "2011年唐才林加入点心创业团队，在近4年的时间里带领相关研发团队建设起了支撑整个公司产品运行的所有基础服务以及云端运营体系。从2013年开始，才林带领团队一起开拓海外市场业务，在不到两年的时间内，在全球范围内累积获取了近五亿用户，两个主产品Du Battery Saver和Du Speed Booster分别成为了全球最大的省电工具和加速优化工具，两款产品月活用户均超过亿人量级。"
+        }
+    ],
+    //营销论坛
+    "yingxiao" : [
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/zh2.jpg",
+            "name" : "曾华",
+            "job" : "百度大客户部总经理",
+            "info" : "2015年7月正式加入百度，全面负责百度大客户部销售及运营管理工作。参加工作21年间，曾供职康柏、西门子、微软等多家知名跨国公司，担任销售总监、销售总经理、大中国区总经理等职务。21年来一直从事销售以及销售管理相关工作，且有接近17年丰富的销售管理经验。在加入百度前曾任微软金融行业总经理以及大中国总经理教育行业总经理，并在微软代领团队创造过两年到240%的业务增长，助力微软在教育行业建立起了良好的合作伙伴生态环境。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/zjy.jpg",
+            "name" : "周劲鹰",
+            "job" : "伊利集团副总裁兼企业策划总经理",
+            "info" : "曾任职于中央电视台经济频道。在伊利供职10年以来，统筹企业形象及领导人声誉管理，直接推动了伊利公关体系的建立和完善、策划实施了一系列公众传播战役，是业内实效公关的推崇者和实践者之一。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/cwh.jpg",
+            "name" : "崔聿泓",
+            "job" : "百度商业生态事业部总经理",
+            "info" : "崔聿泓于1997年获得复旦大学管理学院硕士学位，同年加入微软全球技术中心，曾任数据库支持工程师，数据库支持部经理,微软大中华区全球技术支持中心开发支持部总经理。2008年加入百度，历任百度上海研发中心总监、百度商业产品高级总监，现任百度商业生态事业部总经理。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/wbs.jpg",
+            "name" : "韦柏松",
+            "job" : "百度广告交易及媒体服务产品架构师",
+            "info" : "韦柏松目前负责百度展示类广告的广告交易平台(BES)、供应方平台(SSP)，以及百度数据管理平台（DMP）基础平台产品等产品线的产品管理工作。在加入百度前，韦柏松在微软，土豆，腾讯等公司长期从事产品管理工作。除了有较为丰富的展示类广告系统的产品规划，设计和运营经验外，其还拥有多年的企业级管理软件及互联网产品经验，其负责过的产品线覆盖企业级数据库及商业智能产品，媒体内容运营及管理平台产品，移动互联网和社交产品等。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/cl.jpg",
+            "name" : "陈蕾",
+            "job" : "百度定制化广告总监",
+            "info" : "主要负责百度搜索和垂直搜索领域的定制化品牌广告的产品和工程。面向品牌广告主的品牌推广宣传需求，利用百度在PC和移动领域的媒体能力和优势平台，提供定制化解决方案。16年互联网和数字营销经验，在BAT分别领导过不同类型的商业化广告产品平台。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/tj2.jpg",
+            "name" : "唐进",
+            "job" : "百度开放云产品团队负责人",
+            "info" : "主要负责百度开放云产品团队和客户解决方案团队的管理和业务/产品规划设计。在加入开放云业务线之前，曾经在百度商务搜索部（Ecom）负责凤巢闪投、春华秋实移动app广告联盟产品的研发和管理工作。"
+        },
+        {
+            "img" : "http://baiduworld.baidu.com/2015/images2015/xy.jpg",
+            "name" : "熊赟",
+            "job" : "百度搜索市场部副总监",
+            "info" : "负责百度网页搜索业务、大客户业务、中小企业业务、联盟业务的品牌传播和市场推广，致力于通过营销创新打造以搜索业务为中心，面向广大网民、客户和合作伙伴的良好生态，实现搜索业务的品牌提升和业务成长。"
+        }
+    ],
+    //糯米论坛
     
     
