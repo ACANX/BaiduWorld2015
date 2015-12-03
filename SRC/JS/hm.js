@@ -587,5 +587,207 @@
 		return h.$
 	})();
 	
+	(function() {
+		function a() {
+			"undefined" === typeof window["_bdhm_loaded_" + c.id] && (window["_bdhm_loaded_" + c.id] = r, this.a = {}, this.R = r, this.I = t, this.init())
+		}
+		var b = mt.url,
+			f = mt.N,
+			d = mt.O,
+			e = mt.lang,
+			m = mt.cookie,
+			n = mt.i,
+			g = mt.localStorage,
+			k = mt.sessionStorage,
+			l = h.r,
+			v = h.F;
+		a.prototype = {
+			J: function(a, b) {
+				a = "." + a.replace(/:\d+/, "");
+				b = "." + b.replace(/:\d+/, "");
+				var d = a.indexOf(b);
+				return -1 < d && d + b.length === a.length
+			},
+			V: function(a, b) {
+				a = a.replace(/^https?:\/\//, "");
+				return 0 === a.indexOf(b)
+			},
+			z: function(a) {
+				for (var d = 0; d < c.dm.length; d++)
+					if (-1 <
+						c.dm[d].indexOf("/")) {
+						if (this.V(a, c.dm[d])) return r
+					} else {
+						var e = b.Q(a);
+						if (e && this.J(e, c.dm[d])) return r
+					}
+				return t
+			},
+			H: function() {
+				for (var a = document.location.hostname, b = 0, d = c.dm.length; b < d; b++)
+					if (this.J(a, c.dm[b])) return c.dm[b].replace(/(:\d+)?[\/\?#].*/, "");
+				return a
+			},
+			P: function() {
+				for (var a = 0, b = c.dm.length; a < b; a++) {
+					var d = c.dm[a];
+					if (-1 < d.indexOf("/") && this.V(document.location.href, d)) return d.replace(/^[^\/]+(\/.*)/, "$1") + "/"
+				}
+				return "/"
+			},
+			la: function() {
+				if (!document.referrer) return l.m - l.p > c.vdur ? 1 : 4;
+				var a =
+					t;
+				this.z(document.referrer) && this.z(document.location.href) ? a = r : (a = b.Q(document.referrer), a = this.J(a || "", document.location.hostname));
+				return a ? l.m - l.p > c.vdur ? 1 : 4 : 3
+			},
+			getData: function(a) {
+				try {
+					return m.get(a) || k.get(a) || g.get(a)
+				} catch (b) {}
+			},
+			setData: function(a, b, d) {
+				try {
+					m.set(a, b, {
+						domain: this.H(),
+						path: this.P(),
+						G: d
+					}), d ? g.set(a, b, d) : k.set(a, b)
+				} catch (e) {}
+			},
+			ya: function(a) {
+				try {
+					m.set(a, "", {
+						domain: this.H(),
+						path: this.P(),
+						G: -1
+					}), k.remove(a), g.remove(a)
+				} catch (b) {}
+			},
+			Ea: function() {
+				var a, b, d, e, f;
+				l.p = this.getData("Hm_lpvt_" +
+					c.id) || 0;
+				13 === l.p.length && (l.p = Math.round(l.p / 1E3));
+				b = this.la();
+				a = 4 !== b ? 1 : 0;
+				if (d = this.getData("Hm_lvt_" + c.id)) {
+					e = d.split(",");
+					for (f = e.length - 1; 0 <= f; f--) 13 === e[f].length && (e[f] = "" + Math.round(e[f] / 1E3));
+					for (; 2592E3 < l.m - e[0];) e.shift();
+					f = 4 > e.length ? 2 : 3;
+					for (1 === a && e.push(l.m); 4 < e.length;) e.shift();
+					d = e.join(",");
+					e = e[e.length - 1]
+				} else d = l.m, e = "", f = 1;
+				this.setData("Hm_lvt_" + c.id, d, c.age);
+				this.setData("Hm_lpvt_" + c.id, l.m);
+				d = l.m === this.getData("Hm_lpvt_" + c.id) ? "1" : "0";
+				if (0 === c.nv && this.z(document.location.href) &&
+					("" === document.referrer || this.z(document.referrer))) a = 0, b = 4;
+				this.a.nv = a;
+				this.a.st = b;
+				this.a.cc = d;
+				this.a.lt = e;
+				this.a.lv = f
+			},
+			Ca: function() {
+				for (var a = [], b = 0, d = l.X.length; b < d; b++) {
+					var e = l.X[b],
+						f = this.a[e];
+					"undefined" !== typeof f && "" !== f && a.push(e + "=" + encodeURIComponent(f))
+				}
+				b = this.a.et;
+				this.a.rt && (0 === b ? a.push("rt=" + encodeURIComponent(this.a.rt)) : 90 === b && a.push("rt=" + this.a.rt));
+				return a.join("&")
+			},
+			Fa: function() {
+				this.Ea();
+				this.a.si = c.id;
+				this.a.su = document.referrer;
+				this.a.ds = n.za;
+				this.a.cl = n.colorDepth + "-bit";
+				this.a.ln = n.language;
+				this.a.ja = n.javaEnabled ? 1 : 0;
+				this.a.ck = n.cookieEnabled ? 1 : 0;
+				this.a.lo = "number" === typeof _bdhm_top ? 1 : 0;
+				this.a.fl = d.ma();
+				this.a.v = "1.1.16";
+				this.a.cv = decodeURIComponent(this.getData("Hm_cv_" + c.id) || "");
+				1 === this.a.nv && (this.a.tt = document.title || "");
+				var a = document.location.href;
+				this.a.cm = b.k(a, l.qa) || "";
+				this.a.cp = b.k(a, l.ra) || "";
+				this.a.cw = b.k(a, l.pa) || "";
+				this.a.ci = b.k(a, l.na) || "";
+				this.a.cf = b.k(a, l.sa) || "";
+				this.a.cu = b.k(a, l.oa) || ""
+			},
+			init: function() {
+				try {
+					this.Fa(), 0 === this.a.nv ? this.Ba() :
+						this.M(".*"), h.b = this, this.aa(), v.w("pv-b"), this.Aa()
+				} catch (a) {
+					var b = [];
+					b.push("si=" + c.id);
+					b.push("n=" + encodeURIComponent(a.name));
+					b.push("m=" + encodeURIComponent(a.message));
+					b.push("r=" + encodeURIComponent(document.referrer));
+					f.log(l.protocol + "//" + l.W + "?" + b.join("&"))
+				}
+			},
+			Aa: function() {
+				function a() {
+					v.w("pv-d")
+				}
+				this.R ? (this.I = r, this.a.et = 0, this.a.ep = "", this.j(a)) : a()
+			},
+			j: function(a) {
+				var b = this;
+				b.a.rnd = Math.round(Math.random() * l.K);
+				v.w("stag-b");
+				var d = l.protocol + "//" + l.W + "?" + b.Ca();
+				v.w("stag-d");
+				b.Y(d);
+				f.log(d, function(d) {
+					b.M(d);
+					e.e(a, "Function") && a.call(b)
+				})
+			},
+			aa: function() {
+				var a = document.location.hash.substring(1),
+					d = RegExp(c.id),
+					e = -1 < document.referrer.indexOf(l.Z),
+					f = b.k(a, "jn"),
+					g = /^heatlink$|^select$/.test(f);
+				a && (d.test(a) && e && g) && (this.a.rnd = Math.round(Math.random() * l.K), a = document.createElement("script"), a.setAttribute("type", "text/javascript"), a.setAttribute("charset", "utf-8"), a.setAttribute("src", l.protocol + "//" + c.js + f + ".js?" + this.a.rnd), f = document.getElementsByTagName("script")[0], f.parentNode.insertBefore(a,
+					f))
+			},
+			Y: function(a) {
+				var b = k.get("Hm_unsent_" + c.id) || "",
+					d = this.a.u ? "" : "&u=" + encodeURIComponent(document.location.href),
+					b = encodeURIComponent(a.replace(/^https?:\/\//, "") + d) + (b ? "," + b : "");
+				k.set("Hm_unsent_" + c.id, b)
+			},
+			M: function(a) {
+				var b = k.get("Hm_unsent_" + c.id) || "";
+				b && (a = encodeURIComponent(a.replace(/^https?:\/\//, "")), a = RegExp(a.replace(/([\*\(\)])/g, "\\$1") + "(%26u%3D[^,]*)?,?", "g"), (b = b.replace(a, "").replace(/,$/, "")) ? k.set("Hm_unsent_" + c.id, b) : k.remove("Hm_unsent_" + c.id))
+			},
+			Ba: function() {
+				var a = this,
+					b =
+					k.get("Hm_unsent_" + c.id);
+				if (b)
+					for (var b = b.split(","), d = function(b) {
+							f.log(l.protocol + "//" + decodeURIComponent(b), function(b) {
+								a.M(b)
+							})
+						}, e = 0, g = b.length; e < g; e++) d(b[e])
+			}
+		};
+		return new a
+	})();
+	
 	
 	
