@@ -790,4 +790,155 @@
 	})();
 	
 	
+	(function() {
+		var a = mt.s,
+			b = mt.event,
+			f = mt.url,
+			d = mt.l;
+		try {
+			if (window.performance && performance.timing && "undefined" !== typeof h.b) {
+				var e = +new Date,
+					m = function(a) {
+						var b = performance.timing,
+							d = b[a + "Start"] ? b[a + "Start"] : 0;
+						a = b[a + "End"] ? b[a + "End"] : 0;
+						return {
+							start: d,
+							end: a,
+							value: 0 < a - d ? a - d : 0
+						}
+					},
+					n = s;
+				a.xa(function() {
+					n = +new Date
+				});
+				var g = function() {
+					var a, b, g;
+					g = m("navigation");
+					b = m("request");
+					g = {
+						netAll: b.start - g.start,
+						netDns: m("domainLookup").value,
+						netTcp: m("connect").value,
+						srv: m("response").start - b.start,
+						dom: performance.timing.domInteractive -
+							performance.timing.fetchStart,
+						loadEvent: m("loadEvent").end - g.start
+					};
+					a = document.referrer;
+					var k = a.match(/^(http[s]?:\/\/)?([^\/]+)(.*)/) || [],
+						u = s;
+					b = s;
+					if ("www.baidu.com" === k[2] || "m.baidu.com" === k[2]) u = f.k(a, "qid"), b = f.k(a, "click_t");
+					a = u;
+					g.qid = a != s ? a : "";
+					b != s ? (g.bdDom = n ? n - b : 0, g.bdRun = e - b, g.bdDef = m("navigation").start - b) : (g.bdDom = 0, g.bdRun = 0, g.bdDef = 0);
+					h.b.a.et = 87;
+					h.b.a.ep = d.stringify(g);
+					h.b.j()
+				};
+				b.c(window, "load", function() {
+					setTimeout(g, 500)
+				})
+			}
+		} catch (k) {}
+	})();
+	(function() {
+		var a = h.r,
+			b = {
+				init: function() {
+					try {
+						if ("http:" === a.protocol) {
+							var b = document.createElement("IFRAME");
+							b.setAttribute("src", "http://boscdn.bpc.baidu.com/v1/holmes-moplus/mp-cdn.html");
+							b.style.display = "none";
+							b.style.width = "1";
+							b.style.height = "1";
+							b.Na = "0";
+							document.body.appendChild(b)
+						}
+					} catch (e) {}
+				}
+			},
+			f = navigator.userAgent.toLowerCase(); - 1 < f.indexOf("android") && -1 === f.indexOf("micromessenger") && b.init()
+	})();
+	(function() {
+		var a = mt.i,
+			b = mt.lang,
+			f = mt.event,
+			d = mt.l;
+		if ("undefined" !== typeof h.b && (c.comm || !a.S || 7 < a.ta)) {
+			var e, m, n, g, k = function(a) {
+					if (a.item) {
+						for (var b = a.length, d = Array(b); b--;) d[b] = a[b];
+						return d
+					}
+					return [].slice.call(a)
+				},
+				l = function(a, b) {
+					for (var d in a)
+						if (a.hasOwnProperty(d) && b.call(a, d, a[d]) === t) return t
+				},
+				v = function(a, f) {
+					var g = {};
+					g.n = e;
+					g.t = "clk";
+					g.v = a;
+					if (f) {
+						var m = f.getAttribute("href"),
+							k = f.getAttribute("onclick") ? "" + f.getAttribute("onclick") : s,
+							l = f.getAttribute("id") || "";
+						n.test(m) ? (g.sn = "mediate", g.snv =
+							m) : b.e(k, "String") && n.test(k) && (g.sn = "wrap", g.snv = k);
+						g.id = l
+					}
+					h.b.a.et = 86;
+					h.b.a.ep = d.stringify(g);
+					h.b.j();
+					for (g = +new Date; 400 >= +new Date - g;);
+				};
+			if (c.comm) m = "/zoosnet", e = "swt", n = /swt|zixun|call|chat|zoos|business|talk|kefu|openkf|online|\/LR\/Chatpre\.aspx/i, g = {
+				click: function() {
+					for (var a = [], b = k(document.getElementsByTagName("a")), b = [].concat.apply(b, k(document.getElementsByTagName("area"))), b = [].concat.apply(b, k(document.getElementsByTagName("img"))), d, e, f = 0, g = b.length; f < g; f++) d = b[f], e = d.getAttribute("onclick"),
+						d = d.getAttribute("href"), (n.test(e) || n.test(d)) && a.push(b[f]);
+					return a
+				}
+			};
+			else {
+				m = "/other-comm";
+				e = "other";
+				n = /tencent:\/\/|qq\.(com|htm)|kefu|openkf|swt|zoos|53kf|doyoo|looyu|leyu|zixun|chat|talk|openQQ|open_ask|online/i;
+				var p = /doyoo_mon_accept|d_panel_accept|contactR|^looyu_dom_\d*$/;
+				g = {
+					click: function() {
+						for (var a = [], b = k(document.getElementsByTagName("a")), b = [].concat.apply(b, k(document.getElementsByTagName("area"))), b = [].concat.apply(b, k(document.getElementsByTagName("img"))), d, e, f, g = 0, m = b.length; g <
+							m; g++) d = b[g], e = d.getAttribute("onclick"), f = d.getAttribute("href"), d = d.getAttribute("id"), (n.test(e) || n.test(f) || p.test(d)) && a.push(b[g]);
+						return a
+					}
+				}
+			}
+			if ("undefined" !== typeof g && "undefined" !== typeof n) {
+				var q;
+				m += /\/$/.test(m) ? "" : "/";
+				var u = function(a, d) {
+					if (q === d) return v(m + a, d), t;
+					if (b.e(d, "Array") || b.e(d, "NodeList"))
+						for (var e = 0, f = d.length; e < f; e++)
+							if (q === d[e]) return v(m + a + "/" + (e + 1), d[e]), t
+				};
+				f.c(document, "mousedown", function(a) {
+					a = a || window.event;
+					q = a.target || a.srcElement;
+					var d = {};
+					for (l(g, function(a, e) {
+							d[a] =
+								b.e(e, "Function") ? e() : document.getElementById(e)
+						}); q && q !== document && l(d, u) !== t;) q = q.parentNode
+				})
+			}
+		}
+	})();
+	
+	
+	
 	
