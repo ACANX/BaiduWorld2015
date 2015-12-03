@@ -298,3 +298,112 @@
 		K: 2147483647,
 		X: "cc cf ci ck cl cm cp cu cw ds ep et fl ja ln lo lt nv rnd si st su v cv lv api tt u".split(" ")
 	};
+(function() {
+		var a = {
+			o: {},
+			c: function(a, f) {
+				this.o[a] = this.o[a] || [];
+				this.o[a].push(f)
+			},
+			w: function(a, f) {
+				this.o[a] = this.o[a] || [];
+				for (var d = this.o[a].length, e = 0; e < d; e++) this.o[a][e](f)
+			}
+		};
+		return h.F = a
+	})();
+	(function() {
+		function a(a, d) {
+			var e = document.createElement("script");
+			e.charset = "utf-8";
+			b.e(d, "Function") && (e.readyState ? e.onreadystatechange = function() {
+				if ("loaded" === e.readyState || "complete" === e.readyState) e.onreadystatechange = s, d()
+			} : e.onload = function() {
+				d()
+			});
+			e.src = a;
+			var m = document.getElementsByTagName("script")[0];
+			m.parentNode.insertBefore(e, m)
+		}
+		var b = mt.lang;
+		return h.load = a
+	})();
+	(function() {
+		function a() {
+			return function() {
+				h.b.a.nv = 0;
+				h.b.a.st = 4;
+				h.b.a.et = 3;
+				h.b.a.ep = h.D.ka() + "," + h.D.ga();
+				h.b.j()
+			}
+		}
+
+		function b() {
+			clearTimeout(x);
+			var a;
+			w && (a = "visible" == document[w]);
+			y && (a = !document[y]);
+			g = "undefined" == typeof a ? r : a;
+			if ((!n || !k) && g && l) u = r, p = +new Date;
+			else if (n && k && (!g || !l)) u = t, q += +new Date - p;
+			n = g;
+			k = l;
+			x = setTimeout(b, 100)
+		}
+
+		function f(a) {
+			var p = document,
+				k = "";
+			if (a in p) k = a;
+			else
+				for (var b = ["webkit", "ms", "moz", "o"], q = 0; q < b.length; q++) {
+					var e = b[q] + a.charAt(0).toUpperCase() + a.slice(1);
+					if (e in p) {
+						k =
+							e;
+						break
+					}
+				}
+			return k
+		}
+
+		function d(a) {
+			if (!("focus" == a.type || "blur" == a.type) || !(a.target && a.target != window)) l = "focus" == a.type || "focusin" == a.type ? r : t, b()
+		}
+		var e = mt.event,
+			m = h.F,
+			n = r,
+			g = r,
+			k = r,
+			l = r,
+			v = +new Date,
+			p = v,
+			q = 0,
+			u = r,
+			w = f("visibilityState"),
+			y = f("hidden"),
+			x;
+		b();
+		(function() {
+			var a = w.replace(/[vV]isibilityState/, "visibilitychange");
+			e.c(document, a, b);
+			e.c(window, "pageshow", b);
+			e.c(window, "pagehide", b);
+			"object" == typeof document.onfocusin ? (e.c(document, "focusin", d), e.c(document, "focusout", d)) : (e.c(window, "focus", d),
+				e.c(window, "blur", d))
+		})();
+		h.D = {
+			ka: function() {
+				return +new Date - v
+			},
+			ga: function() {
+				return u ? +new Date - p + q : q
+			}
+		};
+		m.c("pv-b", function() {
+			e.c(window, "unload", a())
+		});
+		return h.D
+	})();
+	
