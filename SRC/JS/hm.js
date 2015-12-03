@@ -938,7 +938,115 @@
 			}
 		}
 	})();
-	
+	(function() {
+		var a = mt.event,
+			b = mt.l;
+		if (c.comm && "undefined" !== typeof h.b) {
+			var f = +new Date,
+				d = {
+					n: "anti",
+					sb: 0,
+					kb: 0,
+					clk: 0
+				},
+				e = function() {
+					h.b.a.et = 86;
+					h.b.a.ep = b.stringify(d);
+					h.b.j()
+				};
+			a.c(document, "click", function() {
+				d.clk++
+			});
+			a.c(document, "keyup", function() {
+				d.kb = 1
+			});
+			a.c(window, "scroll", function() {
+				d.sb++
+			});
+			a.c(window, "unload", function() {
+				d.t = +new Date - f;
+				e()
+			});
+			a.c(window, "load", function() {
+				setTimeout(e, 5E3)
+			})
+		}
+	})();
+	(function() {
+		function a() {
+			this.f = s
+		}
+		var b = mt.N,
+			f = mt.i;
+		a.prototype = {
+			va: function(a) {
+				if (this.f) this.h(a, 0);
+				else if (this.isSupported()) {
+					try {
+						this.f = new ActiveXObject("BDEXIE.BDExExtension.1"), this.T = r
+					} catch (b) {
+						this.T = t
+					}
+					this.T ? this.h(a, 0) : this.h(a, -1)
+				} else this.h(a, -1)
+			},
+			Ha: function() {
+				this.f && delete this.f;
+				this.f = s
+			},
+			Da: function(a, b, d) {
+				if (this.f && "SetLocalCache" in this.f) try {
+					void 0 === this.f.SetLocalCache(a, b) && this.h(d, 0)
+				} catch (f) {
+					this.h(d, -1)
+				} else this.h(d, -1)
+			},
+			ia: function(a, b) {
+				if (this.f && "GetLocalCache" in
+					this.f) try {
+					this.h(b, this.f.GetLocalCache(a))
+				} catch (d) {
+					this.h(b, "")
+				} else this.h(b, "")
+			},
+			fa: function(a) {
+				if (this.f && "GetCryptStr" in this.f) try {
+					this.h(a, this.f.GetCryptStr("strEncryptID1"))
+				} catch (b) {
+					this.h(a, "")
+				} else this.h(a, "")
+			},
+			h: function(a, b) {
+				"function" === typeof a && a(b, this)
+			},
+			isSupported: function() {
+				if (window.ActiveXObject || "ActiveXObject" in window) try {
+					return !!new ActiveXObject("BDEXIE.BDExExtension.1")
+				} catch (a) {}
+				return t
+			},
+			wa: function() {
+				var a = this;
+				this.fa(function(d) {
+					void 0 !== d && "" !== d && (b.log("//datax.baidu.com/x.gif?dm=" +
+						encodeURIComponent("datax.baidu.com/webadapter/guid") + "&ac=" + encodeURIComponent(d) + "&v=hm-webadapter-0.0.1&rnd=" + Math.round(2147483647 * Math.random())), a.Da("hmKey", +new Date, function() {
+						a.Ha()
+					}))
+				})
+			}
+		};
+		if (f.S && /^http(s)?:$/.test(document.location.protocol)) {
+			var d = new a;
+			d.va(function(a) {
+				0 === a && d.ia("hmKey", function(a) {
+					a = +a;
+					(isNaN(a) || 6048E5 < +new Date - a) && d.wa()
+				})
+			})
+		}
+	})();
+})();
+
 	
 	
 	
