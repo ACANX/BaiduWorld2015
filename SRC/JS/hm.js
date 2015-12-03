@@ -407,3 +407,185 @@
 		return h.D
 	})();
 	
+	(function() {
+		var a = mt.lang,
+			b = h.r,
+			f = h.load,
+			d = {
+				ua: function(e) {
+					if ((void 0 === window._dxt || a.e(window._dxt, "Array")) && "undefined" !== typeof h.b) {
+						var d = h.b.H();
+						f([b.protocol, "//datax.baidu.com/x.js?si=", c.id, "&dm=", encodeURIComponent(d)].join(""), e)
+					}
+				},
+				Ga: function(b) {
+					if (a.e(b, "String") || a.e(b, "Number")) window._dxt = window._dxt || [], window._dxt.push(["_setUserId", b])
+				}
+			};
+		return h.ba = d
+	})();
+	(function() {
+		function a(k) {
+			for (var b in k)
+				if ({}.hasOwnProperty.call(k, b)) {
+					var d = k[b];
+					f.e(d, "Object") || f.e(d, "Array") ? a(d) : k[b] = String(d)
+				}
+		}
+
+		function b(a) {
+			return a.replace ? a.replace(/'/g, "'0").replace(/\*/g, "'1").replace(/!/g, "'2") : a
+		}
+		var f = mt.lang,
+			d = mt.l,
+			e = h.r,
+			m = h.F,
+			n = h.ba,
+			g = {
+				q: [],
+				B: 0,
+				U: t,
+				init: function() {
+					g.d = 0;
+					m.c("pv-b", function() {
+						g.ca();
+						g.da()
+					});
+					m.c("pv-d", g.ea);
+					m.c("stag-b", function() {
+						h.b.a.api = g.d || g.B ? g.d + "_" + g.B : ""
+					});
+					m.c("stag-d", function() {
+						h.b.a.api = 0;
+						g.d = 0;
+						g.B = 0
+					})
+				},
+				ca: function() {
+					var a = window._hmt ||
+						[];
+					if (!a || f.e(a, "Array")) window._hmt = {
+						id: c.id,
+						cmd: {},
+						push: function() {
+							for (var a = window._hmt, k = 0; k < arguments.length; k++) {
+								var p = arguments[k];
+								f.e(p, "Array") && (a.cmd[a.id].push(p), "_setAccount" === p[0] && (1 < p.length && /^[0-9a-f]{32}$/.test(p[1])) && (p = p[1], a.id = p, a.cmd[p] = a.cmd[p] || []))
+							}
+						}
+					}, window._hmt.cmd[c.id] = [], window._hmt.push.apply(window._hmt, a)
+				},
+				da: function() {
+					var a = window._hmt;
+					if (a && a.cmd && a.cmd[c.id])
+						for (var b = a.cmd[c.id], d = /^_track(Event|MobConv|Order|RTEvent)$/, p = 0, q = b.length; p < q; p++) {
+							var e = b[p];
+							d.test(e[0]) ? g.q.push(e) : g.L(e)
+						}
+					a.cmd[c.id] = {
+						push: g.L
+					}
+				},
+				ea: function() {
+					if (0 < g.q.length)
+						for (var a = 0, b = g.q.length; a < b; a++) g.L(g.q[a]);
+					g.q = s
+				},
+				L: function(a) {
+					var b = a[0];
+					if (g.hasOwnProperty(b) && f.e(g[b], "Function")) g[b](a)
+				},
+				_setAccount: function(a) {
+					1 < a.length && /^[0-9a-f]{32}$/.test(a[1]) && (g.d |= 1)
+				},
+				_setAutoPageview: function(a) {
+					if (1 < a.length && (a = a[1], t === a || r === a)) g.d |= 2, h.b.R = a
+				},
+				_trackPageview: function(a) {
+					if (1 < a.length && a[1].charAt && "/" === a[1].charAt(0)) {
+						g.d |= 4;
+						h.b.a.et = 0;
+						h.b.a.ep = "";
+						h.b.I ? (h.b.a.nv = 0, h.b.a.st =
+							4) : h.b.I = r;
+						var b = h.b.a.u,
+							d = h.b.a.su;
+						h.b.a.u = e.protocol + "//" + document.location.host + a[1];
+						g.U || (h.b.a.su = document.location.href);
+						h.b.j();
+						h.b.a.u = b;
+						h.b.a.su = d
+					}
+				},
+				_trackEvent: function(a) {
+					2 < a.length && (g.d |= 8, h.b.a.nv = 0, h.b.a.st = 4, h.b.a.et = 4, h.b.a.ep = b(a[1]) + "*" + b(a[2]) + (a[3] ? "*" + b(a[3]) : "") + (a[4] ? "*" + b(a[4]) : ""), h.b.j())
+				},
+				_setCustomVar: function(a) {
+					if (!(4 > a.length)) {
+						var d = a[1],
+							e = a[4] || 3;
+						if (0 < d && 6 > d && 0 < e && 4 > e) {
+							g.B++;
+							for (var p = (h.b.a.cv || "*").split("!"), q = p.length; q < d - 1; q++) p.push("*");
+							p[d - 1] = e + "*" + b(a[2]) +
+								"*" + b(a[3]);
+							h.b.a.cv = p.join("!");
+							a = h.b.a.cv.replace(/[^1](\*[^!]*){2}/g, "*").replace(/((^|!)\*)+$/g, "");
+							"" !== a ? h.b.setData("Hm_cv_" + c.id, encodeURIComponent(a), c.age) : h.b.ya("Hm_cv_" + c.id)
+						}
+					}
+				},
+				_setReferrerOverride: function(a) {
+					1 < a.length && (h.b.a.su = a[1].charAt && "/" === a[1].charAt(0) ? e.protocol + "//" + window.location.host + a[1] : a[1], g.U = r)
+				},
+				_trackOrder: function(b) {
+					b = b[1];
+					f.e(b, "Object") && (a(b), g.d |= 16, h.b.a.nv = 0, h.b.a.st = 4, h.b.a.et = 94, h.b.a.ep = d.stringify(b), h.b.j())
+				},
+				_trackMobConv: function(a) {
+					if (a = {
+							webim: 1,
+							tel: 2,
+							map: 3,
+							sms: 4,
+							callback: 5,
+							share: 6
+						}[a[1]]) g.d |= 32, h.b.a.et = 93, h.b.a.ep = a, h.b.j()
+				},
+				_trackRTPageview: function(b) {
+					b = b[1];
+					f.e(b, "Object") && (a(b), b = d.stringify(b), 512 >= encodeURIComponent(b).length && (g.d |= 64, h.b.a.rt = b))
+				},
+				_trackRTEvent: function(b) {
+					b = b[1];
+					if (f.e(b, "Object")) {
+						a(b);
+						b = encodeURIComponent(d.stringify(b));
+						var l = function(a) {
+								var b = h.b.a.rt;
+								g.d |= 128;
+								h.b.a.et = 90;
+								h.b.a.rt = a;
+								h.b.j();
+								h.b.a.rt = b
+							},
+							m = b.length;
+						if (900 >= m) l.call(this, b);
+						else
+							for (var m = Math.ceil(m / 900), p = "block|" + Math.round(Math.random() *
+									e.K).toString(16) + "|" + m + "|", q = [], u = 0; u < m; u++) q.push(u), q.push(b.substring(900 * u, 900 * u + 900)), l.call(this, p + q.join("|")), q = []
+					}
+				},
+				_setUserId: function(a) {
+					a = a[1];
+					n.ua();
+					n.Ga(a)
+				}
+			};
+		g.init();
+		h.$ = g;
+		return h.$
+	})();
+	
+	
+	
