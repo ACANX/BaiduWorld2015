@@ -87,4 +87,50 @@
 			obj.className = ThisClassName.replace(reg,"");
 		}
 	},
-	
+//获取或设置DOM元素属性  参数一 DOM元素 参数二 属性值 或者要设置的属性JSON 参数三 要设置的属性值
+	attr : function(obj,key,value){
+		if(key && typeof key == "object"){
+			for(var shu in key){
+				obj.setAttribute(shu,key[shu]);
+			};
+			return this;
+		};
+		if(value){
+			obj.setAttribute(key,value);
+			return this;
+		};
+		return obj.getAttribute(key);
+	},
+	removeAttr : function(obj,attr){
+		obj.removeAttribute(attr);
+	},
+	//设置DOM节点的CSS样式，参数一  DOM   参数二 要设置的样式,除了透明度及transform ,其他要写全，不可只写数值。transform的值要分开写，与运动框架一致
+	css : function(obj,json){
+		for(var attr in json){
+			this.setmovecss(obj,attr,json[attr]);
+		};
+		return this;
+	},
+	//显示隐藏元素时，缓存元素display值
+	showhide : function(elem,bool){
+		if(!this.Data.get(elem,"olddisplay")){
+			var dis = this.getStyle(elem,"display");
+			if(dis == "none"){
+				elem.style.display = "";
+				dis = this.getStyle(elem,"display");
+				if(dis == "none"){
+					var oD = document.createElement(elem.nodeName);
+					document.body.appendChild(oD);
+					dis = this.getStyle(oD,"display");
+					document.body.removeChild(oD);
+				}
+			};
+			this.Data.set(elem,"olddisplay", dis);
+		};
+		if(bool){
+			elem.style.display = this.Data.get(elem,"olddisplay");
+		}else{
+			elem.style.display = "none";
+		}
+	},
+	//显示元素	
