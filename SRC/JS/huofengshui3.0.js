@@ -1860,3 +1860,16 @@ Cubic_easeIn: function(t,b,c,d){
 		return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
 	}
 };	
+function selectmenu(id){
+	var sl = document.getElementById(id);
+	if (sl){
+		var sp = sl.parentElement;
+		if(sp){
+			var ch = sp.getElementsByTagName("div")[0];
+			var t = sl.options[sl.selectedIndex].text;
+			if(ch){
+				ch.innerHTML = t;
+			}
+		}
+	}
+}
