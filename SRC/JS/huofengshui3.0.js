@@ -208,3 +208,326 @@ show : function(elem){
 		return arr;
 	},
 	//获取上个兄弟节点
+prev : function(obj){
+		if( !obj || !obj.previousSibling ){
+			return null;
+		};
+		if( obj.previousElementSibling ){
+			return obj.previousElementSibling;
+		};
+		if( obj.previousSibling.nodeType == 1 ){
+			return obj.previousSibling;
+		};
+		return null;
+	},
+	//获取下个兄弟节点
+	next : function(obj){
+		if( !obj || !obj.nextSibling ){
+			return null;
+		};
+		if( obj.nextElementSibling ){
+			return obj.nextElementSibling;
+		};
+		if( obj.nextSibling.nodeType == 1 ){
+			return obj.nextSibling;
+		};
+		return null;
+	},
+	//获取第一个子节点
+	first : function(obj){
+		if( !obj || !obj.firstChild ){
+			return null;
+		}
+		return obj.firstChild.nodeType == 1 ? obj.firstChild : this.next( obj.firstChild );
+	},
+	//获取最后一个子节点
+	last : function(obj){
+		if( !obj || !obj.lastChild ){
+			return null;
+		}
+		return obj.lastChild.nodeType == 1 ? obj.lastChild : this.prev( obj.lastChild );
+	},
+	//获取样式值，参数一 对象，参数二要获取的样式属性
+	getStyle : function(obj,attr){
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];
+		}else{
+			return getComputedStyle(obj,false)[attr];
+		}
+	},
+
+	//时间版运动框架  css运动框架参数检测
+	detection : function(times,fx,fn,delay){
+		if( typeof times == 'undefined' ){
+			times = 400;
+			fx = 'linear';
+			delay = 0;
+		};
+		if( typeof times == 'string' ){
+			if(typeof fx == 'function'){
+				if(typeof fn == 'number'){
+					delay = fn;
+				}else{
+					delay = 0;
+				}
+				fn = fx;
+			}else if(typeof fx == 'number'){
+				delay = fx;
+				fn = null;
+			}else{
+				delay = 0;
+			}
+			fx = times;
+			times = 400;
+		}else if(typeof times == 'function'){
+			if(typeof fx == 'number'){
+				delay = fx;
+			}else{
+				delay = 0;
+			}
+			fn = times;
+			times = 400;
+			fx = 'linear';
+		}else if(typeof times == 'number'){
+			if(typeof fx == 'function'){
+				if(typeof fn == 'number'){
+					delay = fn;
+				}else{
+					delay = 0;
+				}
+				fn = fx;
+				fx = 'linear';
+			}else if(typeof fx == 'undefined'){
+				fx = 'linear';
+				delay = 0;
+			}else if(typeof fx == 'string'){
+				if(typeof fn == 'number'){
+					delay = fn;
+					fn = null;
+				}else if(typeof fn == 'function' && !delay){
+					delay = 0;
+				}
+			}else if(typeof fx == 'number'){
+				delay = fx;
+				fx = 'linear';
+				fn = null;
+			};
+		};
+		return [times,fx,fn,delay];
+	},
+	mousewheel : function(elem,json){
+		elem.onmousewheel = mouseScroll;
+		if(elem.addEventListener){
+			elem.addEventListener('DOMMouseScroll',mouseScroll,false);
+		};
+		var fnup = json.up || function(){};
+		var fndown = json.down || function(){};
+		function mouseScroll(e){
+			var ev = e || window.event;
+			var fx = ev.wheelDelta || ev.detail;
+			var bDown = true;
+			if( ev.detail ){
+				bDown = fx > 0 ? true : false;
+			}else{
+				bDown = fx > 0 ? false : true;
+			};
+			if( bDown ){
+				fndown.call(elem);
+			}else{
+				fnup.call(elem);
+			}
+			if( ev.preventDefault ){
+				ev.preventDefault();
+			}
+			return false;
+		}
+	},
+	//时间版运动框架，扩展了CSS3的运动，参数一对象，参数二json形式的运动属性，参数三运动持续时间，参数四运动形式，参数五，运动结束后的回调
+	movement : function(obj,json,times,fx,fn,delay){
+		var arr = this.detection(times,fx,fn,delay);
+		this.movement_init(obj,json,arr[0],arr[1],arr[2],arr[3],false);
+		return this;
+	},
+	//时间版运动初始化
+	movement_init : function(obj,json,times,fx,fn,delay,css){
+		var _this = this;
+		_this.Queue.queue(obj,"fx",function(){
+			if(delay > 0 && typeof delay == "number"){
+				setTimeout(function(){
+					_this.movement_delay(obj,json,times,fx,fn,delay,css);
+				},delay);
+			}else{
+				_this.movement_delay(obj,json,times,fx,fn,delay,css);
+			}
+		});
+	},
+	movement_delay : function(obj,json,times,fx,fn,delay,css){
+		obj.iCur = {};
+		if(css){
+			this.getMoveCss(obj,obj.iCur,json);
+		}else{
+			if(!obj.transform){
+				obj.transform = {};
+			};
+			this.getmovecss(obj,json,obj.iCur,false);
+		}
+		this.movement_move(obj,json,times,fx,fn,delay);
+	},
+	//时间版运动开始
+	movement_move : function(obj,json,times,fx,fn,delay){
+		var _this = this;
+		var startTime = this.movement_now();
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			var changeTime = _this.movement_now();
+			var t = times - Math.max(0,startTime - changeTime + times);  //0到2000     
+			for(var attr in json){
+				if(attr == 'transform'){
+					var value = [];
+					for(var i=0;i<obj.css_json[attr].length;i++){
+						value[i] = Tween[fx](t,obj.iCur[attr][i],obj.css_json[attr][i]-obj.iCur[attr][i],times);
+					}
+				}else{
+					var value = Tween[fx](t,obj.iCur[attr],json[attr]-obj.iCur[attr],times);
+				}
+				_this.setmovecss(obj,attr,value);
+			}
+			if(t == times){
+				clearInterval(obj.timer);
+				_this.Queue.dequeue(obj,"fx");
+				if(fn){
+					fn.call(obj);
+				}
+			}
+		},13);
+	},
+	//返回当前时间 时间版运动用
+	movement_now : function(){
+		return (new Date()).getTime();
+	},
+	//css运动框架
+	cssmove : function(obj,json,times,fx,fn,delay){
+		var arr = this.detection(times,fx,fn,delay);
+		this.movement_init(obj,json,arr[0],arr[1],arr[2],arr[3],true);
+		return this;
+	},
+	//速度版运动框架，参数一为对象，参数二为运动参数，格式为json，参数三为运动结束后的回调，参数四为匀速运动时的速度，值必须是数值型，否则按缓冲运动
+	hfs_speed : function(obj, json, fnEnd, delay, su){
+		var _this = this;
+		_this.Queue.queue(obj,"fx",function(){
+			if(delay > 0 && typeof delay == "number"){
+				setTimeout(function(){
+					_this.speed_delay(obj, json, fnEnd,su);
+				},delay);
+			}else{
+				_this.speed_delay(obj, json, fnEnd,su);
+			};
+		});
+		return this;
+	},
+	speed_delay : function(obj, json, fnEnd,su){
+		var _this = this;
+		clearInterval(obj.timer);  //确保只有一个定时器
+		obj.timer=setInterval(function(){
+			var bStop=true;		//假设：所有值都已经到了
+			for(var attr in json){   //遍历json
+				obj.cur=0;        //声明变量，存储获取的属性值
+				_this.speed_getcss(obj,attr);
+
+				if(su && typeof su == "number"){ //如果传了速度值，做匀速运动
+					var speed = 0;
+					if(obj.cur < json[attr]){
+						speed = su;
+						if(obj.cur >= json[attr] || (json[attr]-obj.cur)<su){
+							obj.cur = json[attr];
+							speed = 0;
+						}
+					}
+					if(obj.cur > json[attr]){
+						speed= -su;
+						if(obj.cur <= json[attr] || (obj.cur-json[attr])<su){
+							obj.cur = json[attr];
+							speed = 0;
+						}
+					}
+				}else{
+					var speed=(json[attr]-obj.cur)/6;
+					speed=speed>0?Math.ceil(speed):Math.floor(speed);
+				}
+				if(obj.cur!=json[attr]){
+					bStop=false;
+				}
+				if(Math.abs(json[attr]-obj.cur)<1){
+					obj.cur = json[attr];
+				}
+				_this.setmovecss(obj,attr,(obj.cur+speed));
+			}
+			if(bStop){
+				clearInterval(obj.timer);
+				_this.Queue.dequeue(obj,"fx");
+				if(fnEnd){
+					fnEnd.call(obj);
+				}
+			}
+		},30);
+	},
+	//速度版运动的获取样式
+	speed_getcss : function(obj,attr){
+		var _this = this;
+		this.get_css(obj,attr)
+	},
+	//根据后盾网提供的公式做的弹性摩擦运动框架，解决了高度在低版本IE下报错的问题
+	/*
+	 *vx += (targetX - spriteX) * spring;
+	 *spriteX += (vx *= friction);
+	 *这个是公式 targetX为目标点 spriteX为初始值，会在框架运动中变化  直到跟目标点相同
+	 */
+	//弹性运动框架，第一个参数传对象，参数二为弹动系数JSON值，参数三为运动的json形式参数，参数四运动结束后的回调函数 参数五为延迟时间
+	hfs_spring : function(obj,tx,json,fnEnd,delay){
+		var _this = this;
+		_this.Queue.queue(obj,"fx",function(){
+			if(delay > 0 && typeof delay == "number"){
+				setTimeout(function(){
+					_this.spring_delay(obj,tx, json, fnEnd);
+				},delay);
+			}else{
+				_this.spring_delay(obj,tx, json, fnEnd);
+			};
+		});
+		return this;
+	},
+	//弹性运动初始化
+	spring_init : function(obj,json){
+		var _this = this;
+		if(!obj.transform){
+			obj.transform = {};
+		};
+		_this.getmovecss(obj,json,obj.spring_startJson,true);
+	},
+	spring_delay : function(obj,tx,json,fnEnd){
+		var _this = this;
+		obj.spring_startJson = {}; //存储初始值，运动中会变化，直到跟目标值相等
+		obj.spring_vxJson = {};
+		obj.spring_targetJson = {};
+		if(tx && typeof tx =="object"){
+			_this.spring = tx.x;
+			_this.friction = tx.y;
+		}else{
+			_this.spring = 0.8;
+			_this.friction = 0.6;
+		}
+		_this.spring_init(obj,json);
+		clearInterval(obj.dt);
+		obj.dt = setInterval(function(){
+			obj.spring_bStop = true;
+			_this.spring_move(obj,json);
+			if(obj.spring_bStop){
+				clearInterval(obj.dt);
+				_this.Queue.dequeue(obj,"fx");
+				if(fnEnd){
+					fnEnd.call(obj);
+				}
+			}
+		},60);
+	},
+	//弹性运动开始运动
