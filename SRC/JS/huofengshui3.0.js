@@ -1807,4 +1807,56 @@ var Tween = {
 	},
 
 	//三次曲线
-	
+Cubic_easeIn: function(t,b,c,d){
+		return c*(t/=d)*t*t + b;
+	},
+	Cubic_easeOut: function(t,b,c,d){
+		return c*((t=t/d-1)*t*t + 1) + b;
+	},
+	Cubic_easeInOut: function(t,b,c,d){
+		if ((t/=d/2) < 1) return c/2*t*t*t + b;
+		return c/2*((t-=2)*t*t + 2) + b;
+	},
+	Quint_easeIn: function(t,b,c,d){
+		return c*(t/=d)*t*t*t*t + b;
+	},
+	Quint_easeOut: function(t,b,c,d){
+		return c*((t=t/d-1)*t*t*t*t + 1) + b;
+	},
+	Quint_easeInOut: function(t,b,c,d){
+		if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+		return c/2*((t-=2)*t*t*t*t + 2) + b;
+	},
+	Expo_easeIn: function(t,b,c,d){
+		return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+	},
+	Expo_easeOut: function(t,b,c,d){
+		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+	},
+	Expo_easeInOut: function(t,b,c,d){
+		if (t==0) return b;
+		if (t==d) return b+c;
+		if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+		return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+	},
+
+	Sine_easeIn: function(t,b,c,d){
+		return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+	},
+	Sine_easeOut: function(t,b,c,d){
+		return c * Math.sin(t/d * (Math.PI/2)) + b;
+	},
+	Sine_easeInOut: function(t,b,c,d){
+		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+	},
+	Circ_easeIn: function(t,b,c,d){
+		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+	},
+	Circ_easeOut: function(t,b,c,d){
+		return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
+	},
+	Circ_easeInOut: function(t,b,c,d){
+		if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+		return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
+	}
+};	
