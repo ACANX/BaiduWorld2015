@@ -134,3 +134,77 @@
 		}
 	},
 	//显示元素	
+show : function(elem){
+		this.showhide(elem,true);
+	},
+	//隐藏元素
+	hide : function(elem){
+		this.showhide(elem,false);
+	},
+	each : function(arr,callback,arg){
+		var _this = this;
+		var i = 0;
+		var length = arr.length;
+		var value;
+		var array = [];
+		if(this.isArray(arr) || this.isArrayHTML(arr)){
+			for(;i<length;i++){
+				value = callback.call(arr[i],i,arr[i]);
+				if ( value === false ) {
+					break;
+				}
+			}
+		}else{
+			for(i in arr){
+				value = callback.call(arr[i],i,arr[i] );
+				if ( value === false ) {
+					break;
+				}
+			}
+		};
+		return arr;
+	},
+	isArrayHTML : function(elems){
+		return this.toType(elems==="HTML") && elems.length
+	},
+	isArray : Array.isArray || function(arr){
+		return this.toType(arr) === "Array";
+	},
+	//标准获取子元素，建议用非标准children，参数为对象，children 在低版本IE下会算上注释节点，标准不会
+	getChild : function(fu){
+		var oFu = null;
+		if(typeof(fu) != "string"){
+			oFu = fu;
+		}else{
+			oFu = document.getElementById(fu);
+		};
+		var ozis = oFu.childNodes;
+		var ozi = new Array();
+		for(var i=0;i<ozis.length;i++){
+			if(ozis[i].nodeType ==1){
+				ozi.push(ozis[i]);
+			}
+		}
+		return ozi;
+	},
+	//获取所有兄弟节点 参数一 DOM节点  参数二 如果传true 排除样式脚本等标签
+	siblings : function(obj,b){
+		var arr = [];
+		//var childs = obj.parentNode.children;
+		var childs = this.getChild(obj.parentNode);
+		if(b === true){
+			for(var i=0;i<childs.length;i++){
+				if(obj !== childs[i] && childs[i].nodeName !== "SCRIPT" && childs[i].nodeName !== "STYLE" && childs[i].nodeName !== "LINK" && childs[i].nodeName !== "META"){
+					arr.push(childs[i]);
+				}
+			};
+		}else{
+			for(var i=0;i<childs.length;i++){
+				if(obj !== childs[i]){
+					arr.push(childs[i]);
+				}
+			};
+		};
+		return arr;
+	},
+	//获取上个兄弟节点
