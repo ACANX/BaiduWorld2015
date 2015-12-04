@@ -50,4 +50,41 @@
  css ： 设置对象的CSS样式，同步运动框架所需的参数
  ajax : 向服务器提交请求，并返回数据进行回调处理
  */
- 
+ var huofengshui = {
+	//获取含有class的元素集合  参数一 父级元素，即要在那个元素下获取class元素集合，  参数二 元素集合的class名称，参数三，筛选某种标签
+	getByClass : function(parent,className,node){
+		node ? node : node="*";
+		if(parent.getElementsByClassName && node == "*"){
+			return parent.getElementsByClassName(className);
+		}else{
+			var tagName = parent.getElementsByTagName(node);
+			var classArray = [];
+			var reg = new RegExp('(^|\\s)'+className+'($|\\s)');
+			for (var i = 0; i < tagName.length; i++) {
+				if(reg.test(tagName[i].className)){
+					classArray.push(tagName[i]);
+				}
+			};
+			return classArray;
+		}
+	},
+	//检测obj是否有className  参数一 对象 参数二 要检测的class
+	hasClass : function(obj,className){
+		return obj.className.match( new RegExp( "(^|\\s)" + className + "(\\s|$)" )) ? true : false;
+	},
+	//为obj添加className  参数一 对象  参数二 要添加的class
+	addClass : function(obj,sclass){
+		var reg = new RegExp('\\b' + sclass + '\\b');
+		if(!reg.test(obj.className)){
+			obj.className += " " + sclass;
+		}
+	},
+	//删除class，参数一，对象  参数二要删除的class
+	removeClass : function(obj,sclass){
+		var ThisClassName = obj.className;
+		var reg = new RegExp('(^|\\s)' + sclass + '($|\\s)',"g");
+		if(reg.test(ThisClassName)){
+			obj.className = ThisClassName.replace(reg,"");
+		}
+	},
+	
