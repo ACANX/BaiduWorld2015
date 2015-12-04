@@ -1380,3 +1380,431 @@ spring_move : function(obj,json){
 	},
 
 	//判断是否为移动端，且移动端浏览器版本 返回布尔值
+browser : {
+		versions:function(){
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {         //移动终端浏览器版本信息
+				trident: u.indexOf('Trident') > -1, //IE内核
+				presto: u.indexOf('Presto') > -1, //opera内核
+				webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+				gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+				mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+				ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+				android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+				iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+				iPad: u.indexOf('iPad') > -1, //是否iPad
+				webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+			};
+		}(),
+		language:(navigator.browserLanguage || navigator.language).toLowerCase()
+	},
+
+	//获取URL传来的参数值
+	datatype : function(name){
+		var re = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+		var Parameter = window.location.search.substr(1).match(re);
+		if(Parameter != null){
+			return (Parameter[2]);
+		}else{
+			return null;
+		}
+	},
+
+	//返回URL相关信息，参数为数值1-7
+	getURL : function(zhi){
+		switch(zhi){
+			case 1: //设置或获取对象指定的文件名或路径。
+				return window.location.pathname;
+				break;
+			case 2: //设置或获取整个 URL 为字符串。
+				return window.location.href;
+				break;
+			case 3: //设置或获取与 URL 关联的端口号码。
+				return window.location.port;
+				break;
+			case 4: //设置或获取 URL 的协议部分。
+				return window.location.protocol;
+				break;
+			case 5: //设置或获取 href 属性中在井号“#”后面的分段。
+				return window.location.hash;
+				break;
+			case 6: //设置或获取 location 或 URL 的 hostname 和 port 号码。
+				return window.location.host;
+				break;
+			case 7: //设置或获取 href 属性中跟在问号后面的部分。
+				return window.location.search;
+				break;
+			default:
+				return null;
+				break;
+		}
+	},
+
+	//封装好的ajax  参数一  请求类型 get||post  参数二 请求的服务器地址  参数三 请求参数值 参数四请求成功后的回调
+	//encodeURIComponent  加密 
+	//decodeURI 解密
+	ajax : function(opt){
+		var _this = this;
+		this.ajax_settings = {   //默认参数
+			method : "get",  //请求类型
+			url : "",        //请求的URL
+			data : "",       //请求的数据
+			type : "text",       //数据类型，后台返回的数据类型
+			success : function(){},    //成功后的回调
+			error : function(){}       //失败后的回调
+		};
+
+		this.extend(this.ajax_settings,opt);
+
+		//创建ajax对象
+		var xhr = null;
+		//如果浏览器支持XMLHttpRequest，创建对象，IE7以上包括IE7，都支持，IE6不支持
+		if (window.XMLHttpRequest) {
+			xhr = new XMLHttpRequest();
+		} else {
+			xhr = new ActiveXObject('Microsoft.XMLHTTP');  //Microsoft.XMLHTTP 有版本号，因为IE6以下浏览器没有了，直接使用无版本号即可
+		}
+
+		if(typeof this.ajax_settings.data =="object"){
+			var data = "";
+			for(var attr in this.ajax_settings.data){
+				data += attr+"="+this.ajax_settings.data[attr]+"&";
+			}
+			this.ajax_settings.data = data.slice(0,data.length-1);
+		};
+
+		//请求方式
+		if(this.ajax_settings.method == "get"){
+			this.ajax_settings.url += "?" + this.ajax_settings.data;
+		};
+		xhr.open(this.ajax_settings.method,this.ajax_settings.url, true);
+
+		if(this.ajax_settings.method == "get"){
+			xhr.send();
+		}else{
+			xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+			xhr.send(this.ajax_settings.data);
+		}
+
+		//监听服务器响应
+		if (xhr.onload === undefined) {	//不支持onload事件
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4) {
+					//xhr.status : 服务器返回的状态码
+					if (xhr.status == 200) {
+						var data = xhr.responseText;
+						if (_this.ajax_settings.type == 'json') {
+							data = JSON.parse(xhr.responseText);
+						}
+						if (_this.ajax_settings.type == 'xml') {
+							data = xhr.responseXML;
+						}
+						_this.ajax_settings.success(data);
+					} else {
+						_this.ajax_settings.error(xhr.status, xhr.responseText);
+					}
+				}
+			}
+		} else {
+			xhr.onload = function() {
+				if (xhr.status == 200) {
+					var data = xhr.responseText;
+					if (_this.ajax_settings.type == 'json') {
+						data = JSON.parse(xhr.responseText);
+					}
+					if (_this.ajax_settings.type == 'xml') {
+						data = xhr.responseXML;
+					}
+					_this.ajax_settings.success(data);
+				} else {
+					_this.ajax_settings.error(xhr.status, xhr.responseText);
+				}
+			}
+		}
+	},
+	//常用正则
+	re : {
+		//邮箱的判断
+		Email:/^[\w\.\-]+@[a-z0-9]+(\.[a-z]+){1,3}$/,
+		//手机号的判断
+		Mobile:/^1[3458]\d{9}$/,
+		//固话判断
+		Telephone:/^(0\d{2,3}-)?[2-9]\d{6,7}(-\d{1,5})?$/,
+		//身份证的判断
+		ID:/^[1-9]\d{5}((19)|(20))\d{2}((0[1-9])|(1[0-2]))((0[1-9])|([12][0-9])|(3[01]))\d{3}([0-9]|X)$/,
+		//判断是否含有中文
+		Chinas:/[^\u4e00-\u9fa5]/,
+		//匹配所有HTML标签,不包含img标签  可用于清除HTML标签 
+		HTML:/<[^(img)>]+>/g,
+		//验证是不是有效的URL
+		URL:/^(https|http):\/\/([0-9a-z_!~*'()-]*\.?)([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\.([a-z]{2,6})(:[0-9]{1,4})?([a-zA-Z/?_=]*)\.\w{1,5}/,
+		//匹配邮编
+		Code:/^\d{6}$/
+	},
+	//sizzle 选择器 支持css3的选择器 选择器功能由培姐实现
+	hfs : (function() {
+		var b = /(?:[\w\-\\.#]+)+(?:\[\w+?=([\'"])?(?:\\\1|.)+?\1\])?|\*|>/ig,
+			g = /^(?:[\w\-_]+)?\.([\w\-_]+)/,
+			f = /^(?:[\w\-_]+)?#([\w\-_]+)/,
+			j = /^([\w\*\-_]+)/,
+			h = [null, null];
+		function d(o, m) {
+			m = m || document;
+			var k = /^[\w\-_#]+$/.test(o);
+			if (!k && m.querySelectorAll) {
+				return c(m.querySelectorAll(o))
+			}
+			if (o.indexOf(",") > -1) {
+				var v = o.split(/,/g),
+					t = [],
+					s = 0,
+					r = v.length;
+				for (; s < r; ++s) {
+					t = t.concat(d(v[s], m))
+				}
+				return e(t)
+			}
+			var p = o.match(b),
+				n = p.pop(),
+				l = (n.match(f) || h)[1],
+				u = !l && (n.match(g) || h)[1],
+				w = !l && (n.match(j) || h)[1],
+				q;
+			if (u && !w && m.getElementsByClassName) {
+				q = c(m.getElementsByClassName(u))
+			} else {
+				q = !l && c(m.getElementsByTagName(w || "*"));
+				if (u) {
+					q = i(q, "className", RegExp("(^|\\s)" + u + "(\\s|$)"))
+				}
+				if (l) {
+					var x = m.getElementById(l);
+					return x ? [x] : []
+				}
+			}
+			return p[0] && q[0] ? a(p, q) : q
+		}
+		function c(o) {
+			try {
+				return Array.prototype.slice.call(o)
+			} catch(n) {
+				var l = [],
+					m = 0,
+					k = o.length;
+				for (; m < k; ++m) {
+					l[m] = o[m]
+				}
+				return l
+			}
+		}
+		function a(w, p, n) {
+			var q = w.pop();
+			if (q === ">") {
+				return a(w, p, true)
+			}
+			var s = [],
+				k = -1,
+				l = (q.match(f) || h)[1],
+				t = !l && (q.match(g) || h)[1],
+				v = !l && (q.match(j) || h)[1],
+				u = -1,
+				m,
+				x,
+				o;
+			v = v && v.toLowerCase();
+			while ((m = p[++u])) {
+				x = m.parentNode;
+				do {
+					o = !v || v === "*" || v === x.nodeName.toLowerCase();
+					o = o && (!l || x.id === l);
+					o = o && (!t || RegExp("(^|\\s)" + t + "(\\s|$)").test(x.className));
+					if (n || o) {
+						break
+					}
+				} while (( x = x . parentNode ));
+				if (o) {
+					s[++k] = m
+				}
+			}
+			return w[0] && s[0] ? a(w, s) : s
+		}
+		var e = (function() {
+			var k = +new Date();
+			var l = (function() {
+				var m = 1;
+				return function(p) {
+					var o = p[k],
+						n = m++;
+					if (!o) {
+						p[k] = n;
+						return true
+					}
+					return false
+				}
+			})();
+			return function(m) {
+				var s = m.length,
+					n = [],
+					q = -1,
+					o = 0,
+					p;
+				for (; o < s; ++o) {
+					p = m[o];
+					if (l(p)) {
+						n[++q] = p
+					}
+				}
+				k += 1;
+				return n
+			}
+		})();
+		function i(q, k, p) {
+			var m = -1,
+				o, n = -1,
+				l = [];
+			while ((o = q[++m])) {
+				if (p.test(o[k])) {
+					l[++n] = o
+				}
+			}
+			return l
+		}
+		return d
+	})()
+};
+
+var Tween = {
+	linear: function (t, b, c, d){  //匀速
+		return c*t/d + b;
+	},
+	easeIn: function(t, b, c, d){  //加速曲线
+		return c*(t/=d)*t + b;
+	},
+	easeOut: function(t, b, c, d){  //减速曲线
+		return -c *(t/=d)*(t-2) + b;
+	},
+	easeBoth: function(t, b, c, d){  //加速减速曲线
+		if ((t/=d/2) < 1) {
+			return c/2*t*t + b;
+		};
+		return -c/2 * ((--t)*(t-2) - 1) + b;
+	},
+	easeInStrong: function(t, b, c, d){  //加加速曲线
+		return c*(t/=d)*t*t*t + b;
+	},
+	easeOutStrong: function(t, b, c, d){  //减减速曲线
+		return -c * ((t=t/d-1)*t*t*t - 1) + b;
+	},
+	easeBothStrong: function(t, b, c, d){  //加加速减减速曲线
+		if ((t/=d/2) < 1) {
+			return c/2*t*t*t*t + b;
+		}
+		return -c/2 * ((t-=2)*t*t*t - 2) + b;
+	},
+
+	//弹动
+	elasticIn: function(t, b, c, d, a, p){  //正弦衰减曲线（弹动渐入）
+		if (t === 0) {
+			return b;
+		}
+		if ( (t /= d) == 1 ) {
+			return b+c;
+		}
+		if (!p) {
+			p=d*0.3;
+		}
+		if (!a || a < Math.abs(c)) {
+			a = c;
+			var s = p/4;
+		} else {
+			var s = p/(2*Math.PI) * Math.asin (c/a);
+		}
+		return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+	},
+	elasticOut: function(t, b, c, d, a, p){    //正弦增强曲线（弹动渐出）
+		if (t === 0) {
+			return b;
+		}
+		if ( (t /= d) == 1 ) {
+			return b+c;
+		}
+		if (!p) {
+			p=d*0.3;
+		}
+		if (!a || a < Math.abs(c)) {
+			a = c;
+			var s = p / 4;
+		} else {
+			var s = p/(2*Math.PI) * Math.asin (c/a);
+		}
+		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+	},
+	elasticBoth: function(t, b, c, d, a, p){
+		if (t === 0) {
+			return b;
+		}
+		if ( (t /= d/2) == 2 ) {
+			return b+c;
+		}
+		if (!p) {
+			p = d*(0.3*1.5);
+		}
+		if ( !a || a < Math.abs(c) ) {
+			a = c;
+			var s = p/4;
+		}
+		else {
+			var s = p/(2*Math.PI) * Math.asin (c/a);
+		}
+		if (t < 1) {
+			return - 0.5*(a*Math.pow(2,10*(t-=1)) *
+				Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+		}
+		return a*Math.pow(2,-10*(t-=1)) *
+			Math.sin( (t*d-s)*(2*Math.PI)/p )*0.5 + c + b;
+	},
+
+	//回缩
+	backIn: function(t, b, c, d, s){     //回退加速（回退渐入）
+		if (typeof s == 'undefined') {
+			s = 1.70158;
+		}
+		return c*(t/=d)*t*((s+1)*t - s) + b;
+	},
+	backOut: function(t, b, c, d, s){
+		if (typeof s == 'undefined') {
+			s = 3.70158;  //回缩的距离
+		}
+		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+	},
+	backBoth: function(t, b, c, d, s){
+		if (typeof s == 'undefined') {
+			s = 1.70158;
+		}
+		if ((t /= d/2 ) < 1) {
+			return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+		}
+		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+	},
+	bounceIn: function(t, b, c, d){    //弹球减振（弹球渐出）  起始弹动
+		return c - Tween['bounceOut'](d-t, 0, c, d) + b;
+	},
+	bounceOut: function(t, b, c, d){
+		if ((t/=d) < (1/2.75)) {
+			return c*(7.5625*t*t) + b;
+		} else if (t < (2/2.75)) {
+			return c*(7.5625*(t-=(1.5/2.75))*t + 0.75) + b;
+		} else if (t < (2.5/2.75)) {
+			return c*(7.5625*(t-=(2.25/2.75))*t + 0.9375) + b;
+		}
+		return c*(7.5625*(t-=(2.625/2.75))*t + 0.984375) + b;
+	},
+	bounceBoth: function(t, b, c, d){
+		if (t < d/2) {
+			return Tween['bounceIn'](t*2, 0, c, d) * 0.5 + b;
+		}
+		return Tween['bounceOut'](t*2-d, 0, c, d) * 0.5 + c*0.5 + b;
+	},
+
+	//三次曲线
+	
