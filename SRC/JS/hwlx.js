@@ -195,6 +195,28 @@ var hwlx = {
         */
     ],
     //互联网金融论坛
-    
-    
+      "hulianwang" : [
+        {
+            "name" : "李佳博",
+            "tel" : "",
+            "email" : "lijiabo@baidu.com"
+        }
+    ],
+    //国际化论坛
+    "guojihua" : [
+        {
+            "name" : "张亦楠",
+            "tel" : "",
+            "email" : "zhangyinan02@baidu.com"
+        }
+    ],
+    //营销论坛
+    "yingxiao" : [
+        {
+            "name" : "程晚思",
+            "tel" : "",
+            "email" : "chengwansi@baidu.com"
+        }
+    ],
+    //糯米论坛  
     
