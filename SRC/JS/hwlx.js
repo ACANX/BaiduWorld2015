@@ -219,4 +219,43 @@ var hwlx = {
         }
     ],
     //糯米论坛  
-    
+       "nuomi" : [
+        {
+            "name" : "宋明",
+            "tel" : "",
+            "email" : "songming02@baidu.com"
+        }
+        /*
+        {
+            "name" : "欧阳亦心",
+            "tel" : "",
+            "email" : "ouyangyixin@baidu.com"
+        }
+        */
+    ],
+    //大数据&人工智能&物联网论坛
+    "dashuju" : [
+        {
+            "name" : "蒋晓琳",
+            "tel" : "",
+            "email" : "jiangxiaolin01@baidu.com"
+        }
+        /*
+        {
+            "name" : "李敏",
+            "tel" : "",
+            "email" : "limin04@baidu.com"
+        },
+        {
+            "name" : "孙思",
+            "tel" : "",
+            "email" : "sunsi01@baidu.com"
+        },
+        {
+            "name" : "刘阳子",
+            "tel" : "",
+            "email" : "liuyangzi@baidu.com"
+        }
+        */
+    ],
+    //开发云论坛
