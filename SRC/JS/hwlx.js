@@ -273,3 +273,11 @@ var hwlx = {
         }
         */
     ],
+       //分析师论坛
+    "fenxi" : [
+        {
+            "name" : "李慕",
+            "tel" : "",
+            "email" : "limu01@baidu.com"
+        }
+    ],
