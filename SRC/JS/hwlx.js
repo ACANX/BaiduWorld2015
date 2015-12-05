@@ -180,5 +180,21 @@ var hwlx = {
         */
     ],
     //医疗论坛
+     "yiliao" : [
+        {
+            "name" : "刘艳青",
+            "tel" : "",
+            "email" : "liuyanqing01@baidu.com"
+        }
+        /*
+        {
+            "name" : "徐佳",
+            "tel" : "",
+            "email" : "xujia02@baidu.com"
+        }
+        */
+    ],
+    //互联网金融论坛
+    
     
     
