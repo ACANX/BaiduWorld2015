@@ -259,3 +259,17 @@ var hwlx = {
         */
     ],
     //开发云论坛
+  "kaifangyun" : [
+        {
+            "name" : "蒋晓琳",
+            "tel" : "",
+            "email" : "jiangxiaolin01@baidu.com"
+        }
+        /*
+        {
+            "name" : "李敏",
+            "tel" : "",
+            "email" : "limin04@baidu.com"
+        }
+        */
+    ],
