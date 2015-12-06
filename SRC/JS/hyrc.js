@@ -210,3 +210,42 @@ var hyrc = {
         }
     ],
     //贴吧论坛
+   "shuzi" : [
+        {
+            "time" : "14:05-14:10",
+            "yicheng" : "领导致辞",
+            "guests" : "王湛<br/>百度副总裁",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:10-14:25",
+            "yicheng" : "业务负责人致辞",
+            "guests" : "陆复斌<br/>百度副总裁、百度贴吧事业部总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:25-15:10",
+            "yicheng" : "贴吧业务线负责人主题分享",
+            "guests" : "张新泳、阎研、彭梧",
+            "className" : "title1"
+        },
+		{
+            "time" : "15:10-15:30",
+            "yicheng" : "特邀嘉宾分享",
+            "guests" : "",
+            "className" : "title1"
+        },
+		{
+            "time" : "15:30-16:00",
+            "yicheng" : "桌面百度产品发布及展示",
+            "guests" : "曹杨<br/>百度高级经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:00<span style='opacity:0'>-16:00<span>",
+            "yicheng" : " 论坛结束",
+            "guests" : "",
+            "className" : "title1"
+        }
+    ],
+    //医疗论坛
