@@ -163,3 +163,50 @@ var hyrc = {
         }
     ],
     //移动分发论坛
+   "yidong" : [
+        {
+            "time" : "14:00-14:05",
+            "yicheng" : "开场致辞",
+            "guests" : "熊贵成<br/>百度移动服务事业群组移动分发事业部总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:05-14:30",
+            "yicheng" : "应用分发的3.0时代，如何协同发展",
+            "guests" : "熊振<br/>百度移动分发事业部副总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:30-15:10",
+            "yicheng" : "百度移动分发开发者认证体系",
+            "guests" : "郭湘琰<br/>移动分发事业部产品研发中心高级经理<br/>朱颖<br/>百度移动分发事业部运营中心高级" +
+            "经理<br/>苏亮<br/>移动分发事业部产品生态高级经理",
+            "className" : "title6"
+        },
+        {
+            "time" : "15:10-15:40",
+            "yicheng" : "金熊掌Panel",
+            "guests" : "熊振<br/>百度移动分发事业部副总经理<br/>方益民 <br/>百度投资并购部执行" +
+            "总监<br/>郎春晖<br/>创新工场合伙人<br/> 南立新等",
+            "className" : "title7"
+        },
+        {
+            "time" : "15:40-16:00",
+            "yicheng" : "百通品牌发布及产品简介",
+            "guests" : "赵婷<br/>百度分发事业部副总经理<br/>丁晓森<br/>移动分发事业部助理总经理",
+            "className" : "title4"
+        },
+        {
+            "time" : "16:00-16:20",
+            "yicheng" : "客户showcase",
+            "guests" : "TBD",
+            "className" : "title1"
+        },
+        {
+            "time" : "16:20-17:00",
+            "yicheng" : "销售签约",
+            "guests" : "",
+            "className" : "title1"
+        }
+    ],
+    //贴吧论坛
