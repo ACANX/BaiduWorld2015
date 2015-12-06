@@ -573,5 +573,74 @@ var hyrc = {
         }
     ],
     //开放云论坛
-    
+     "kaifangyun" : [
+        {
+            "time" : "13:30-14:00",
+            "yicheng" : "现场签到",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:00-14:10",
+            "yicheng" : "主题演讲",
+            "guests" : "刘炀<br/>百度基础架构部高级总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:10-14:30",
+            "yicheng" : "百度开放云  助飞3600行",
+            "guests" : "刘炀<br/>百度基础架构部高级总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:30-14:45",
+            "yicheng" : "Intel领先科技助力百度开放云",
+            "guests" : "Intel 中国区COO Chee, Kit Ho",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:45-15:00",
+            "yicheng" : "主题演讲:  百度智能语音开放",
+            "guests" : "谢延<br/>百度语音技术部高级架构师、语音开放平台技术负责人",
+            "className" : "title3"
+        },
+        {
+            "time" : "15:00-15:30",
+            "yicheng" : "百度开放云多媒体解决方案发布",
+            "guests" : "李旭<br/>百度开放云多媒体业务负责人",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:30-16:00",
+            "yicheng" : "百度开放云大数据解决方案发布",
+            "guests" : "朱冠胤<br/>百度开放云大数据负责人",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:00-16:30",
+            "yicheng" : "百度开放云移动解决方案发布",
+            "guests" : "施佳樑<br/>百度众测&MTC负责人",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:30-16:50",
+            "yicheng" : "百度IoT-云上的万物互联",
+            "guests" : "梁泉<br/>百度移动安全总经理 物联网研究中心负责人",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:50-17:15",
+            "yicheng" : "合作伙伴政策发布及圆桌论坛",
+            "guests" : "傅徐军<br/>百度基础架构部副总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "17:15-17:20",
+            "yicheng" : "结束+抽奖",
+            "guests" : "刘炀<br/>百度基础架构部高级总监",
+            "className" : "title2"
+        }
+    ]
+
+} 
     
