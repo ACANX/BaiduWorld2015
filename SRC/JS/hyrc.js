@@ -288,3 +288,92 @@ var hyrc = {
         }
     ],
     //互联网金融论坛
+     "hulianwang" : [
+        {
+            "time" : "13:30-14:00",
+            "yicheng" : "嘉宾及媒体签到",
+            "guests" : "全体嘉宾",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:00-14:05",
+            "yicheng" : "开场欢迎词",
+            "guests" : "百度高管",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:05-15:20",
+            "yicheng" : "主题发言",
+            "guests" : "金融行业政府领导 传统银行行级领导 金融行业学术专家",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:20-16:30",
+            "yicheng" : "论坛讨论，核心议题",
+            "guests" : "百度高管",
+            "className" : "title1"
+        },
+        {
+            "time" : "",
+            "yicheng" : "互联网金融的新生态与新格局",
+            "guests" : "互联网金融高管",
+            "className" : "title1"
+        },
+        {
+            "time" : "",
+            "yicheng" : "",
+            "guests" : "金融行业学术专家",
+            "className" : "title1"
+        },
+        {
+            "time" : "16:30-16:40",
+            "yicheng" : "会议收尾",
+            "guests" : "百度金融事业部领导",
+            "className" : "title1"
+        }
+    ],
+    //国际化论坛
+       "guojihua" : [
+        {
+            "time" : "13:00-14:00",
+            "yicheng" : "嘉宾签到",
+            "guests" : ""
+        },
+        {
+            "time" : "14:10-14:50",
+            "yicheng" : "国际化战略揭秘",
+            "guests" : "胡勇<br/>百度国际事业部总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:40-15:10",
+            "yicheng" : "全球移动广告平台发布",
+            "guests" : "唐才林<br/>国际化产品部副总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:10-15:25",
+            "yicheng" : "茶歇",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "15:25-15:45",
+            "yicheng" : "百度巴西O2O生存记",
+            "guests" : "Alexander Tabo<br/>Peixe Urbano CEO",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:45-16:05",
+            "yicheng" : "原生广告业的百度机遇",
+            "guests" : "程涛<br/>popIn CEO",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:05-17:05",
+            "yicheng" : "媒体群访",
+            "guests" : "上述主要嘉宾及媒体参加",
+            "className" : "title1"
+        }
+    ],
+    //营销论坛
