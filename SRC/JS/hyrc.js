@@ -377,3 +377,54 @@ var hyrc = {
         }
     ],
     //营销论坛
+  "yingxiao" : [
+        {
+            "time" : "13:30-14:00",
+            "yicheng" : "嘉宾签到",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:00-14:20",
+            "yicheng" : "Moments+",
+            "guests" : "曾华<br/>百度大客户部总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:20-14:35",
+            "yicheng" : "百度伊利战略启动仪式",
+            "guests" : "朱光&nbsp;&nbsp;&nbsp;&nbsp;周劲鹰<br/>伊利集团副总裁兼企业策划总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:35-14:55",
+            "yicheng" : "传统营销的互联网+",
+            "guests" : "崔聿泓<br/>百度商业生态事业部总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:55-15:10",
+            "yicheng" : "释放大数据能量，成就高品质生态",
+            "guests" : "韦柏松<br/>百度广告交易及媒体服务产品架构师",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:10-15:25",
+            "yicheng" : "百度媒体资源与产品",
+            "guests" : "陈蕾<br/>定制化广告总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:25-15:40",
+            "yicheng" : "百度开放云助力数字营销",
+            "guests" : "唐进<br/>百度开放云产品团队负责人",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:40-15:55",
+            "yicheng" : "大客户创新实践暨新广告狂人大赛颁奖",
+            "guests" : "熊赟<br/>搜索市场部副总监<br/>Gavin Pathross<br/>百盛餐饮集团中国事业部首席数位官",
+            "className" : "title4"
+        }
+    ],
+    //糯米论坛
