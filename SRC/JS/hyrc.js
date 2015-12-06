@@ -249,3 +249,42 @@ var hyrc = {
         }
     ],
     //医疗论坛
+   "yiliao" : [
+        {
+            "time" : "14:00-14:10",
+            "yicheng" : "卫计委领导致辞",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:10-14:30",
+            "yicheng" : "百度医疗生态联盟战略与价值",
+            "guests" : "李政<br/>百度新兴业务群组 商务拓展与合作总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:30-15:00",
+            "yicheng" : "互联网医疗的中国模式",
+            "guests" : "高解春<br/>复旦大学医院管理研究所所长",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:00-16:30",
+            "yicheng" : "医疗联盟﹒共创未来",
+            "guests" : "10家中国著名医疗服务机构及企业",
+            "className" : "title1"
+        },
+        {
+            "time" : "16:30-16:40",
+            "yicheng" : "医疗生态联盟启动仪式",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "16:40<span style='opacity:0'>-16:30</span>",
+            "yicheng" : "会议圆满结束",
+            "guests" : "",
+            "className" : "title1"
+        }
+    ],
+    //互联网金融论坛
