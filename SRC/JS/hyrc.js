@@ -521,3 +521,57 @@ var hyrc = {
         }
     ],
     //大数据与人工智能论坛
+    "dashuju" : [
+        {
+            "time" : "13:30-14:00",
+            "yicheng" : "签到",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:00-14:05",
+            "yicheng" : "开场致辞",
+            "guests" : "王劲<br/>百度高级副总裁",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:05-14:25",
+            "yicheng" : "百度大数据，商业新能源",
+            "guests" : "郭谢<br/>百度大数据部高级总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:25-15:20",
+            "yicheng" : "百度大数据 + 行业应用",
+            "guests" : "喻友平<br/>百度大数据部副总监<br/>杨亿<br/>新华电商副总裁<br/>王亚博<br/>大地云游CEO<br/>" +
+            "李英伟<br/>朝阳大悦城信息部总监",
+            "className" : "title8"
+        },
+        {
+            "time" : "15:20-15:40",
+            "yicheng" : "用大数据构建智慧世界",
+            "guests" : "范伟<br/>百度大数据实验室副主任",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:40-16:00",
+            "yicheng" : "智能语音技术",
+            "guests" : "刘洋<br/>百度语音技术部高级技术经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:00-16:15",
+            "yicheng" : "构建大数据共享生态",
+            "guests" : "刘斌<br/>百度技术体系技术经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:15-16:35",
+            "yicheng" : "视觉、语言以及人工智能展望",
+            "guests" : "徐伟<br/>百度深度学习实验室杰出科学家",
+            "className" : "title2"
+        }
+    ],
+    //开放云论坛
+    
+    
