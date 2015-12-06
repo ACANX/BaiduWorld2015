@@ -100,3 +100,66 @@ var hyrc = {
         }
     ],
     //连接人和服务论坛
+ "ren" : [
+        {
+            "time" : "13:30-14:00",
+            "yicheng" : "参会嘉宾签到入场",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:00-14:15",
+            "yicheng" : "开幕致辞",
+            "guests" : "李明<br/>百度移动服务事业群组，首席产品架构师，百度直达号业务总经理",
+            "className" : "title3"
+        },
+		{
+            "time" : "14:15-14:25",
+            "yicheng" : "全新地图 索引服务",
+            "guests" : "李东旻<br/>百度移动服务事业群组高级总监，百度地图事业部总经理",
+            "className" : "title3"
+        },
+		{
+            "time" : "14:25-14:45",
+            "yicheng" : "百度地图的平台化生态",
+            "guests" : "顾维灏<br/>百度地图事业部副总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:45-15:05",
+            "yicheng" : "手机百度“生活+”：亿万用户的优质生活服务生态",
+            "guests" : "黎科峰 · 博士<br/>手机百度总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:05-15:25",
+            "yicheng" : "直达号生态由茧化蝶——构建移动生活多维生态圈",
+            "guests" : "李明<br/>百度移动服务事业群组首席产品架构师，百度直达号业务总经理",
+            "className" : "title3"
+        },
+        {
+            "time" : "15:25-15:45",
+            "yicheng" : "源泉：汇聚权益 突破边际",
+            "guests" : "章政华<br/>百度百付宝公司总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:45-16:05",
+            "yicheng" : "外卖生态与技术范儿",
+            "guests" : "巩振兵<br/>百度外卖总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:05-16:25",
+            "yicheng" : "创新技术改变移动服务",
+            "guests" : "王晓航<br/>百度百付宝公司首席架构师",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:25-16:30",
+            "yicheng" : "闭幕",
+            "guests" : "",
+            "className" : "title1"
+        }
+    ],
+    //移动分发论坛
