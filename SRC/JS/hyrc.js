@@ -428,3 +428,96 @@ var hyrc = {
         }
     ],
     //糯米论坛
+   "nuomi" : [
+        {
+            "time" : "13:30-14:00",
+            "yicheng" : "嘉宾签到",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:00-14:05",
+            "yicheng" : "开场视频、主持人开场",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "14:05-14:25",
+            "yicheng" : "主题演讲",
+            "guests" : "曾良<br/>百度副总裁 百度糯米总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:25-14:45",
+            "yicheng" : "本地生活新生态计划",
+            "guests" : "傅海波<br/>百度糯米副总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:45-15:15",
+            "yicheng":"商户合作伙伴发言:朝阳大悦城",
+            "guests": "李英伟<br/>朝阳大悦城研策部总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:45-15:15",
+            "yicheng":"商户合作伙伴发言：中国电信",
+            "guests": "罗来峰<br/>中国电信天翼电子商务CEO",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:45-15:15",
+            "yicheng":"内容合作伙伴发言：e袋洗",
+            "guests": "陆文勇<br/>e袋洗 CEO",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:45-15:15",
+            "yicheng":"商家服务商发言：小美科技",
+            "guests": "刘柯志<br/>小美科技创始人 CEO",
+            "className" : "title2"
+        },
+        {
+            "time" : "14:45-15:15",
+            "yicheng":"餐饮合作伙伴发言：蜀江烤鱼",
+            "guests": "韩明<br/>蜀江烤鱼品牌运营总监",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:15-15:35",
+            "yicheng" : "电影新生态计划",
+            "guests" : "徐勇明<br/>百度糯米电影业务部总经理",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:35-16:05",
+            "yicheng":"院线合作伙伴发言",
+            "guests": "郑吉崇<br/>星美集团CEO",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:35-16:05",
+            "yicheng":"糯米电影合作伙伴",
+            "guests": "张航<br/>青春光线总裁",
+            "className" : "title2"
+        },
+        {
+            "time" : "15:35-16:05",
+            "yicheng":"导演合作伙伴发言",
+            "guests": "李少红<br/>中国电影导演协会会长",
+            "className" : "title2"
+        },
+        {
+            "time" : "16:05-16:10",
+            "yicheng" : "百度糯米战略合作启动仪式",
+            "guests" : "",
+            "className" : "title1"
+        },
+        {
+            "time" : "16:10-16:15",
+            "yicheng" : "论坛落幕",
+            "guests" : "",
+            "className" : "title1"
+        }
+    ],
+    //大数据与人工智能论坛
