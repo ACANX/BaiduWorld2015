@@ -19,3 +19,7 @@ var news = [
         "title" : "百度李东旻：“度秘”背后三大连接机制",
         "src" : "http://news.91.com/it/1509/21871531.html"
     },
+  {
+        "title" : "百度发布机器人度秘 开启智能服务时代",
+        "src" : "http://news.91.com/it/1509/21872017.html"
+    },
