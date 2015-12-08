@@ -11,3 +11,7 @@ var news = [
         "title" : "百度王劲：百度大数据将成商业新能源",
         "src" : "http://news.91.com/it/1509/21871916.html"
     },
+ {
+        "title" : "百度李东旻：百度地图变身生活服务平台",
+        "src" : "http://news.91.com/it/1509/21871854.html"
+    },
