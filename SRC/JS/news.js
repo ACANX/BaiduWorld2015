@@ -23,3 +23,8 @@ var news = [
         "title" : "百度发布机器人度秘 开启智能服务时代",
         "src" : "http://news.91.com/it/1509/21872017.html"
     },
+ {
+        "title" : "2015百度世界前瞻：开启未来智能世界",
+        "src" : "http://news.91.com/it/1509/21871091.html"
+    }
+]
