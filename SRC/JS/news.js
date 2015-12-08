@@ -15,3 +15,7 @@ var news = [
         "title" : "百度李东旻：百度地图变身生活服务平台",
         "src" : "http://news.91.com/it/1509/21871854.html"
     },
+ {
+        "title" : "百度李东旻：“度秘”背后三大连接机制",
+        "src" : "http://news.91.com/it/1509/21871531.html"
+    },
