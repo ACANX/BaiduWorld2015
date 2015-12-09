@@ -585,3 +585,21 @@
 
     var rAF = scope[ b ];
     var cAF = scope[ c ];
+
+ for ( var i = 0; i < vendors.length && !rAF; i++ ) {
+
+        rAF = scope[ vendors[ i ] + 'Request' + a ];
+        cAF = scope[ vendors[ i ] + 'Cancel' + a ];
+    }
+
+    scope[ b ] = rAF = rAF || function( callback ) {
+
+        var now = +new Date();
+        var dt = M.max( 0, 16 - ( now - then ) );
+        var id = setTimeout( function() {
+            callback( now + dt );
+        }, dt );
+
+        then = now + dt;
+        return id;
+    };
