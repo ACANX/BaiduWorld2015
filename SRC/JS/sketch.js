@@ -356,3 +356,215 @@
 
             return copy;
         }
+
+   function pointer( event ) {
+
+            event = process( event );
+
+            min = ( max = eventMap.indexOf( type = event.type ) ) - 1;
+
+            context.dragging =
+
+                /down|start/.test( type ) ? true :
+
+                /up|end/.test( type ) ? false :
+
+                context.dragging;
+
+            while( min )
+
+                isString( eventMap[ min ] ) ?
+
+                    trigger( context[ eventMap[ min-- ] ], event ) :
+
+                isString( eventMap[ max ] ) ?
+
+                    trigger( context[ eventMap[ max++ ] ], event ) :
+
+                min = 0;
+        }
+
+        function keypress( event ) {
+
+            key = event.keyCode;
+            val = event.type == 'keyup';
+            keys[ key ] = keys[ keyName( key ) ] = !val;
+
+            trigger( context[ event.type ], event );
+        }
+
+        function active( event ) {
+
+            if ( context.autopause )
+
+                ( event.type == 'blur' ? stop : start )();
+
+            trigger( context[ event.type ], event );
+        }
+
+        // Public API
+
+        function start() {
+
+            context.now = +new Date();
+            context.running = true;
+        }
+
+        function stop() {
+
+            context.running = false;
+        }
+
+        function toggle() {
+
+            ( context.running ? stop : start )();
+        }
+
+        function clear() {
+
+            if ( is2D )
+
+                context.clearRect( 0, 0, context.width, context.height );
+        }
+
+        function destroy() {
+
+            parent = context.element.parentNode;
+            index = instances.indexOf( context );
+
+            if ( parent ) parent.removeChild( context.element );
+            if ( ~index ) instances.splice( index, 1 );
+
+            bind( false );
+            stop();
+        }
+
+        extend( context, {
+
+            touches: touches,
+            mouse: mouse,
+            keys: keys,
+
+            dragging: false,
+            running: false,
+            millis: 0,
+            now: NaN,
+            dt: NaN,
+
+            destroy: destroy,
+            toggle: toggle,
+            clear: clear,
+            start: start,
+            stop: stop
+        });
+
+        instances.push( context );
+
+        return ( context.autostart && start(), bind( true ), resize(), update(), context );
+    }
+
+    /*
+    ----------------------------------------------------------------------
+
+        Global API
+
+    ----------------------------------------------------------------------
+    */
+
+    var element, context, Sketch = {
+
+        CANVAS: CANVAS,
+        WEB_GL: WEBGL,
+        WEBGL: WEBGL,
+        DOM: DOM,
+
+        instances: instances,
+
+        install: function( context ) {
+
+            if ( !context[ HAS_SKETCH ] ) {
+
+                for ( var i = 0; i < MATH_PROPS.length; i++ )
+
+                    context[ MATH_PROPS[i] ] = M[ MATH_PROPS[i] ];
+
+                extend( context, {
+
+                    TWO_PI: M.PI * 2,
+                    HALF_PI: M.PI / 2,
+                    QUARTER_PI: M.PI / 4,
+
+                    random: function( min, max ) {
+
+                        if ( isArray( min ) )
+
+                            return min[ ~~( M.random() * min.length ) ];
+
+                        if ( !isNumber( max ) )
+
+                            max = min || 1, min = 0;
+
+                        return min + M.random() * ( max - min );
+                    },
+
+                    lerp: function( min, max, amount ) {
+
+                        return min + amount * ( max - min );
+                    },
+
+                    map: function( num, minA, maxA, minB, maxB ) {
+
+                        return ( num - minA ) / ( maxA - minA ) * ( maxB - minB ) + minB;
+                    }
+                });
+
+                context[ HAS_SKETCH ] = true;
+            }
+        },
+
+        create: function( options ) {
+
+            options = extend( options || {}, defaults );
+
+            if ( options.globals ) Sketch.install( self );
+
+            element = options.element = options.element || doc.createElement( options.type === DOM ? 'div' : 'canvas' );
+
+            context = options.context = options.context || (function() {
+
+                switch( options.type ) {
+
+                    case CANVAS:
+
+                        return element.getContext( '2d', options );
+
+                    case WEBGL:
+
+                        return element.getContext( 'webgl', options ) || element.getContext( 'experimental-webgl', options );
+
+                    case DOM:
+
+                        return element.canvas = element;
+                }
+
+            })();
+
+            ( options.container || doc.body ).appendChild( element );
+
+            return Sketch.augment( context, options );
+        },
+
+        augment: function( context, options ) {
+
+            options = extend( options || {}, defaults );
+
+            options.element = context.canvas || context;
+            options.element.className += ' sketch';
+
+            extend( context, options, true );
+
+            return constructor( context );
+        }
+    };
+
+
