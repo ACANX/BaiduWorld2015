@@ -578,3 +578,10 @@
  var vendors = [ 'ms', 'moz', 'webkit', 'o' ];
     var scope = self;
     var then = 0;
+    
+     var a = 'AnimationFrame';
+    var b = 'request' + a;
+    var c = 'cancel' + a;
+
+    var rAF = scope[ b ];
+    var cAF = scope[ c ];
