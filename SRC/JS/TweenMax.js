@@ -7338,7 +7338,11 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 				a[i]();
 			}
 			for (p in _defLookup) {
-				if (!_defLookup[p].func) {		
+				if (!_defLookup[p].func) {
+					window.console.log("GSAP encountered missing dependency: com.greensock." + p);
+				}
+			}
+		}		
 		
 
 
