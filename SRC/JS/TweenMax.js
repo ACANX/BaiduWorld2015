@@ -7329,7 +7329,9 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 			TweenPlugin.activate([Plugin]);
 			return Plugin;
 		};
-		
+
+//now run through all the dependencies discovered and if any are missing, log that to the console as a warning. This is why it's best to have TweenLite load last - it can check all the dependencies for you.
+		a = window._gsQueue;		
 		
 		
 
