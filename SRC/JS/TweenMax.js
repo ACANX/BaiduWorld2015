@@ -7336,7 +7336,9 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 		if (a) {
 			for (i = 0; i < a.length; i++) {
 				a[i]();
-			}		
+			}
+			for (p in _defLookup) {
+				if (!_defLookup[p].func) {		
 		
 
 
