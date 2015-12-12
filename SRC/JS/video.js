@@ -31,3 +31,7 @@ var video = {
     "yiliao" : [
 
     ],
+    //互联网金融论坛
+    "hulianwang" : [
+
+    ],
