@@ -35,3 +35,15 @@ var video = {
     "hulianwang" : [
 
     ],
+       //国际化论坛
+    "guojihua" : [
+
+    ],
+    //营销论坛
+    "yingxiao" : [
+
+    ],
+    //糯米论坛
+    "nuomi" : [
+
+    ],
