@@ -55,3 +55,7 @@ var video = {
     "kaifangyun" : [
 
     ],
+       //分析师论坛
+    "fenxi" : [
+
+    ]
