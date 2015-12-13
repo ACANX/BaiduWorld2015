@@ -213,3 +213,5 @@ function goto() {
         }
     }
 }
+goto();
+setInterval(goto,3800);
