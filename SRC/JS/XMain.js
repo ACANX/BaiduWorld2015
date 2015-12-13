@@ -210,3 +210,6 @@ function goto() {
             }else{
                 xStage.spawn( touch.x+random(-300,300), touch.y+random(-30,30),-_channel,i);
             }
+        }
+    }
+}
