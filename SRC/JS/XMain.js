@@ -199,3 +199,6 @@ function goto() {
             {x:_width*1.4,y: _height*0.05}
     ];
 
+
+    for ( i = 0, n = _touches.length; i < n; i++ ) {
+        touch = _touches[i], max = _rdn[i];//random( 50, _rdn[i] );
