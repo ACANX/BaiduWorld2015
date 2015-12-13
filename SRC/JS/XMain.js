@@ -206,3 +206,7 @@ function goto() {
         for ( j = 0; j < max; j++ ) {
             var _channel = Math.pow(random(1,500),2)/_channels[i];
             if(i!=2){
+                xStage.spawn( touch.x+random(-60,60), touch.y+random(-60,60),-_channel,i);
+            }else{
+                xStage.spawn( touch.x+random(-300,300), touch.y+random(-30,30),-_channel,i);
+            }
