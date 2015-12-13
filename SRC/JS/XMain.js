@@ -14,3 +14,28 @@ var xStage = Sketch.create({
     container: document.getElementById( 'XStage' )
 });
 
+
+function Particle( x, y, radius ) {
+    this.init( x, y, radius );
+}
+
+Particle.prototype = {
+
+    init: function( x, y, radius ) {
+
+        this.alive = true;
+
+        this.radius = radius || 10;
+        this.wander = 0.15;
+        this.theta = random( TWO_PI );
+        this.drag = 1.72;
+        this.color = '#fff';
+        this.alpha = 0.001;
+
+        this.x = x || 0.0;
+        this.y = y || 0.0;
+
+        this.vx = 0.0;
+        this.vy = 0.0;
+    },
+    draw: function( ctx ) {
