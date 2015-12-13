@@ -202,3 +202,7 @@ function goto() {
 
     for ( i = 0, n = _touches.length; i < n; i++ ) {
         touch = _touches[i], max = _rdn[i];//random( 50, _rdn[i] );
+
+        for ( j = 0; j < max; j++ ) {
+            var _channel = Math.pow(random(1,500),2)/_channels[i];
+            if(i!=2){
